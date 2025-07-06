@@ -1,0 +1,284 @@
+Pixelwave/
+├── index.html
+├── main/
+│   ├── services.html
+│   ├── about.html
+│   ├── contact.html
+│   ├── team.html
+│   ├── blog.html
+
+├── wallpaper-categories/
+│   ├── Nature.html
+│   ├── Abstract.html
+│   ├── Space.html
+│   ├── Cityscapes.html
+│   ├── Minimalist.html
+│   ├── Animals.html
+│   ├── Fantasy.html
+│   ├── Technology.html
+│   ├── Art & Illustrations.html
+│   ├── Anime.html
+│   ├── Vintage.html
+│   ├── Travel & Adventure.html
+│   ├── Seasons.html
+│   ├── Gaming.html
+│   ├── Macro.html
+│   └── Nature/
+│       ├── Forests.html
+│       ├── Mountains.html
+│       ├── Rivers.html
+│       ├── Waterfalls.html
+│       ├── Beaches.html
+│       ├── Deserts.html
+│       ├── Snowscapes.html
+│       ├── Sunsets.html
+│       ├── Sunrises.html
+│       └── Lakes.html
+│   └── Abstract/
+│       ├── Geometric Shapes.html
+│       ├── Color Splashes.html
+│       ├── 3D Patterns.html
+│       ├── Swirls.html
+│       ├── Gradients.html
+│       ├── Wave Designs.html
+│       ├── Fractals.html
+│       ├── Pixel Art.html
+│       ├── Smoke Effects.html
+│       └── Light Streaks.html
+│   └── Space/
+│       ├── Stars.html
+│       ├── Planets.html
+│       ├── Galaxies.html
+│       ├── Nebulae.html
+│       ├── Black Holes.html
+│       ├── Astronauts.html
+│       ├── Space Stations.html
+│       ├── Comets.html
+│       ├── Aurora Borealis.html
+│       └── Alien Worlds.html
+│   └── Cityscapes/
+│       ├── Skylines.html
+│       ├── Night Cities.html
+│       ├── Bridges.html
+│       ├── Skyscrapers.html
+│       ├── Street Views.html
+│       ├── Rooftops.html
+│       ├── Urban Lights.html
+│       ├── Old Towns.html
+│       ├── Modern Architecture.html
+│       └── City Reflections.html
+│   └── Minimalist/
+│       ├── Solid Colors.html
+│       ├── Simple Icons.html
+│       ├── Line Art.html
+│       ├── Flat Designs.html
+│       ├── Monochrome.html
+│       ├── Gradient Backgrounds.html
+│       ├── Silhouettes.html
+│       ├── Text Quotes.html
+│       ├── Abstract Symbols.html
+│       └── Clean Patterns.html
+│   └── Animals/
+│       ├── Wild Cats.html
+│       ├── Birds.html
+│       ├── Marine Life.html
+│       ├── Dogs.html
+│       ├── Cats.html
+│       ├── Reptiles.html
+│       ├── Insects.html
+│       ├── Farm Animals.html
+│       ├── Safari Animals.html
+│       └── Polar Animals.html
+│   └── Fantasy/
+│       ├── Dragons.html
+│       ├── Unicorns.html
+│       ├── Castles.html
+│       ├── Magic Forests.html
+│       ├── Elves.html
+│       ├── Wizards.html
+│       ├── Mythical Creatures.html
+│       ├── Enchanted Lands.html
+│       ├── Fairy Tales.html
+│       └── Epic Battles.html
+│   └── Technology/
+│       ├── Cyberpunk.html
+│       ├── Circuit Boards.html
+│       ├── Robots.html
+│       ├── AI Themes.html
+│       ├── Futuristic Cities.html
+│       ├── Digital Grids.html
+│       ├── Holograms.html
+│       ├── Neon Lights.html
+│       ├── Sci-Fi Gadgets.html
+│       └── Virtual Reality.html
+│   └── Art & Illustrations/
+│       ├── Watercolor.html
+│       ├── Oil Paintings.html
+│       ├── Sketches.html
+│       ├── Digital Art.html
+│       ├── Pop Art.html
+│       ├── Surreal Art.html
+│       ├── Abstract Portraits.html
+│       ├── Cartoon Styles.html
+│       ├── Graffiti.html
+│       └── Fantasy Illustrations.html
+│   └── Anime/
+│       ├── Anime Characters.html
+│       ├── Anime Landscapes.html
+│       ├── Manga Panels.html
+│       ├── Chibi Art.html
+│       ├── Mecha Robots.html
+│       ├── Slice of Life.html
+│       ├── Fantasy Anime.html
+│       ├── Sci-Fi Anime.html
+│       ├── Anime Couples.html
+│       └── Shonen Art.html
+│   └── Vintage/
+│       ├── Retro Cars.html
+│       ├── Old Posters.html
+│       ├── Vintage Patterns.html
+│       ├── Black & White Photos.html
+│       ├── Typewriters.html
+│       ├── Vinyl Records.html
+│       ├── Retro Tech.html
+│       ├── Classic Bikes.html
+│       ├── Old Maps.html
+│       └── Nostalgic Ads.html
+│   └── Travel & Adventure/
+│       ├── Famous Landmarks.html
+│       ├── Tropical Islands.html
+│       ├── Mountain Treks.html
+│       ├── Road Trips.html
+│       ├── Ancient Ruins.html
+│       ├── Cultural Festivals.html
+│       ├── Hot Air Balloons.html
+│       ├── Camping Scenes.html
+│       ├── World Maps.html
+│       └── Adventure Gear.html
+│   └── Seasons/
+│       ├── Spring Flowers.html
+│       ├── Summer Beaches.html
+│       ├── Autumn Leaves.html
+│       ├── Winter Snow.html
+│       ├── Rainy Days.html
+│       ├── Cherry Blossoms.html
+│       ├── Fall Forests.html
+│       ├── Sunny Fields.html
+│       ├── Icy Landscapes.html
+│       └── Seasonal Festivals.html
+│   └── Gaming/
+│       ├── Game Characters.html
+│       ├── Game Worlds.html
+│       ├── Pixel Games.html
+│       ├── Fantasy RPGs.html
+│       ├── Sci-Fi Games.html
+│       ├── Battle Arenas.html
+│       ├── Retro Games.html
+│       ├── Esports Themes.html
+│       ├── Game Weapons.html
+│       └── Gaming Logos.html
+│   └── Macro/
+│       ├── Water Droplets.html
+│       ├── Flower Close-Ups.html
+│       ├── Insect Details.html
+│       ├── Leaf Textures.html
+│       ├── Food Macros.html
+│       ├── Crystal Patterns.html
+│       ├── Feather Details.html
+│       ├── Sand Grains.html
+│       ├── Metal Textures.html
+│       └── Fruit Slices.html
+├── assets/
+│   ├── css/
+│   │   ├── main.css
+│   │   ├── animations.css
+│   │   ├── responsive.css
+│   │   └── wallpapers.css
+│   ├── js/
+│   │   ├── main.js
+│   │   ├── adsense.js
+│   │   ├── wallpaper-categories/
+│   │       ├── Nature/
+│   │           ├── Forests.js
+│   │           ├── Mountains.js
+│   │           ├── Rivers.js
+│   │           ├── Waterfalls.js
+│   │           ├── Beaches.js
+│   │           ├── Deserts.js
+│   │           ├── Snowscapes.js
+│   │           ├── Sunsets.js
+│   │           ├── Sunrises.js
+│   │           └── Lakes.js
+│   │       ├── Abstract/
+│   │           ├── Geometric Shapes.js
+│   │           ├── Color Splashes.js
+│   │           ├── 3D Patterns.js
+│   │           ├── Swirls.js
+│   │           ├── Gradients.js
+│   │           ├── Wave Designs.js
+│   │           ├── Fractals.js
+│   │           ├── Pixel Art.js
+│   │           ├── Smoke Effects.js
+│   │           └── Light Streaks.js
+│   ├── images/
+└── legal/
+    ├── privacy.html
+    └── terms.html
+
+
+----------------------------
+
+
+
+
+
+Write, legal/privacy.html and privacy.css
+Write, legal/terms.html and terms.css
+
+
+view links:
+https://drive.google.com/uc?id=1baXRFCTa-Obhp3P_aLOt6G3R4Dk5w8th&export=view
+https://drive.google.com/uc?id=1JbE6krLoxeMM0HrrAtkftk6d6tpr0RGD&export=view
+https://drive.google.com/uc?id=1vxmBo656c3mUCN6ARUACO7ygntM7fTxb&export=view
+https://drive.google.com/uc?id=1xaH6BKzLv107sDwc0VmzVRbFiUMqQ-KM&export=view
+https://drive.google.com/uc?id=1-cdc1is7CVQSMdm2hcGZYMFK4FmmV_IW&export=view
+https://drive.google.com/uc?id=1asYLVBDYdI1ZLEDdhZAT62Y-cYpYPqKF&export=view
+https://drive.google.com/uc?id=123GG3uYp1d32WK5NFF7k3WOYQkLPaUQc&export=view
+https://drive.google.com/uc?id=16xx3RRhrPY6mPRDrA3vp_xLtCopit9MS&export=view
+https://drive.google.com/uc?id=1BXAc1v_GDfLjp1a22N-kunPYU-DQodtE&export=view
+https://drive.google.com/uc?id=1Zn8b-NSzcvVTi36ah0HgF1dw3cqVSvVe&export=view
+https://drive.google.com/uc?id=1fJigSqDeDXGZBEDgv5i78-tlp7IjuLK2&export=view
+https://drive.google.com/uc?id=1MQsk06bNpkv5610qn0u4JOAUOnARHqrp&export=view
+https://drive.google.com/uc?id=14PZDIFnLgAKH6t8m0nj8QuYRaVYVMMZx&export=view
+https://drive.google.com/uc?id=1pOfNyw_NgsuLq8mQUvEb9rvqqC2D3Ext&export=view
+https://drive.google.com/uc?id=1dufMZ83c_diswcWKngSQVmKwRKMc2jhl&export=view
+https://drive.google.com/uc?id=1GFT2eQpnTSHv8eb8sW4PKGa1oGW5JAl8&export=view
+https://drive.google.com/uc?id=1i4hB7jP9ErK9lRXN2Wusys7ycq5XEqcd&export=view
+https://drive.google.com/uc?id=19pb-uMDQe41swBQxX5M6oshDMuw8Y6l5&export=view
+https://drive.google.com/uc?id=1OcmLefDfI85aRlYzHAGHGyqbYLBulTMr&export=view
+https://drive.google.com/uc?id=1L-g1-R8sag6vsoVGZZBchJTf3pCj-Dy4&export=view
+
+download links:
+https://drive.google.com/uc?export=download&id=1baXRFCTa-Obhp3P_aLOt6G3R4Dk5w8th
+https://drive.google.com/uc?export=download&id=1JbE6krLoxeMM0HrrAtkftk6d6tpr0RGD
+https://drive.google.com/uc?export=download&id=1vxmBo656c3mUCN6ARUACO7ygntM7fTxb
+https://drive.google.com/uc?export=download&id=1xaH6BKzLv107sDwc0VmzVRbFiUMqQ-KM
+https://drive.google.com/uc?export=download&id=1-cdc1is7CVQSMdm2hcGZYMFK4FmmV_IW
+https://drive.google.com/uc?export=download&id=1asYLVBDYdI1ZLEDdhZAT62Y-cYpYPqKF
+https://drive.google.com/uc?export=download&id=123GG3uYp1d32WK5NFF7k3WOYQkLPaUQc
+https://drive.google.com/uc?export=download&id=16xx3RRhrPY6mPRDrA3vp_xLtCopit9MS
+https://drive.google.com/uc?export=download&id=1BXAc1v_GDfLjp1a22N-kunPYU-DQodtE
+https://drive.google.com/uc?export=download&id=1Zn8b-NSzcvVTi36ah0HgF1dw3cqVSvVe
+https://drive.google.com/uc?export=download&id=1fJigSqDeDXGZBEDgv5i78-tlp7IjuLK2
+https://drive.google.com/uc?export=download&id=1MQsk06bNpkv5610qn0u4JOAUOnARHqrp
+https://drive.google.com/uc?export=download&id=14PZDIFnLgAKH6t8m0nj8QuYRaVYVMMZx
+https://drive.google.com/uc?export=download&id=1pOfNyw_NgsuLq8mQUvEb9rvqqC2D3Ext
+https://drive.google.com/uc?export=download&id=1dufMZ83c_diswcWKngSQVmKwRKMc2jhl
+https://drive.google.com/uc?export=download&id=1GFT2eQpnTSHv8eb8sW4PKGa1oGW5JAl8
+https://drive.google.com/uc?export=download&id=1i4hB7jP9ErK9lRXN2Wusys7ycq5XEqcd
+https://drive.google.com/uc?export=download&id=19pb-uMDQe41swBQxX5M6oshDMuw8Y6l5
+https://drive.google.com/uc?export=download&id=1OcmLefDfI85aRlYzHAGHGyqbYLBulTMr
+https://drive.google.com/uc?export=download&id=1L-g1-R8sag6vsoVGZZBchJTf3pCj-Dy4
+
+
+

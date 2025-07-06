@@ -1,0 +1,228 @@
+Wallpaper Categories and Subcategories for Mobile Wallpaper Website
+1. Nature
+
+Create 10 unique 4K mobile wallpapers text prompts for the Nature category, specifically under the subcategory "Insert Subcategory". Each wallpaper should be breathtaking, vibrant, and optimized for mobile screens (9:16 aspect ratio, 2160x3840 resolution). Ensure the designs are diverse, capturing different moods, lighting, and elements related to "Insert Subcategory". Include variations like realistic scenes, surreal interpretations, minimalistic takes, and artistic styles (e.g., digital painting, cinematic, or abstract). Avoid repetitive themes by exploring unique angles, such as close-ups, wide landscapes, or incorporating fantastical elements like glowing flora or mythical creatures. Use vivid colors, intricate details, and dynamic compositions to make each wallpaper visually striking.
+
+Forests
+Mountains
+Rivers
+Waterfalls
+Beaches
+Deserts
+Snowscapes
+Sunsets
+Sunrises
+Bioluminescent Landscapes
+
+2. Abstract
+
+Generate 10 distinct 4K mobile wallpapers text prompts for the Abstract category, focusing on the subcategory "Insert Subcategory". Designs should be visually captivating, with a 9:16 aspect ratio and 2160x3840 resolution. Create a variety of styles, including bold and vibrant, soft and subtle, 3D effects, and experimental textures. Ensure each wallpaper feels unique by varying color palettes, patterns, and compositions, such as combining metallic finishes, glowing effects, or fluid motions. Avoid repetitive designs by exploring different interpretations of "Insert Subcategory", like futuristic, retro, or organic-inspired aesthetics.
+
+Geometric Shapes
+AI-Generated Patterns
+3D Patterns
+Swirls
+Gradients
+Wave Designs
+Fractals
+Holographic Textures
+Smoke Effects
+Light Streaks
+
+3. Space
+
+Design 10 unique 4K mobile wallpapers text prompts for the Space category, under the subcategory "Insert Subcategory". Each wallpaper should be awe-inspiring, with a 9:16 aspect ratio and 2160x3840 resolution. Capture the grandeur of space through diverse styles, such as hyper-realistic cosmic scenes, stylized illustrations, or surreal cosmic art. Vary the themes by including elements like glowing stars, alien atmospheres, or futuristic spacecraft. Use vibrant colors, deep contrasts, and intricate details to make each wallpaper stand out, ensuring no two designs feel similar.
+
+Stars
+Planets
+Galaxies
+Nebulae
+Black Holes
+Astronauts
+Exoplanet Horizons
+Comets
+Aurora Borealis
+Alien Worlds
+
+4. Cityscapes
+
+Create 10 stunning 4K mobile wallpapers text prompts for the Cityscapes category, focusing on the subcategory "Insert Subcategory". Wallpapers should have a 9:16 aspect ratio and 2160x3840 resolution, designed to be visually immersive. Include a range of styles, such as futuristic neon-lit cities, serene daytime views, or gritty cyberpunk aesthetics. Diversify the designs with unique perspectives (e.g., aerial, street-level, or reflective surfaces) and lighting conditions (e.g., dawn, dusk, or stormy). Ensure each wallpaper feels distinct by incorporating varied architectural styles or cultural elements.
+
+Skylines
+Night Cities
+Bridges
+Skyscrapers
+Street Views
+Rooftops
+Urban Lights
+Eco-Friendly Cities
+Modern Architecture
+City Reflections
+
+5. Minimalist
+
+Generate 10 elegant 4K mobile wallpapers text prompts for the Minimalist category, under the subcategory "Insert Subcategory". Each wallpaper should have a 9:16 aspect ratio and 2160x3840 resolution, emphasizing simplicity and clean aesthetics. Create diverse designs by experimenting with color schemes (monochrome, pastel, or bold accents), layouts, and subtle textures. Avoid repetition by exploring different minimalist approaches, such as geometric forms, symbolic icons, or abstract silhouettes, ensuring each wallpaper feels fresh and visually appealing.
+
+Simple Icons
+Line Art
+Flat Designs
+Monochrome
+Gradient Backgrounds
+Silhouettes
+Micro-Animations
+Abstract Symbols
+Clean Patterns
+Minimalist Color Palettes
+
+6. Animals
+
+Design 10 vibrant 4K mobile wallpapers text prompts for the Animals category, focusing on the subcategory "Insert Subcategory". Wallpapers should have a 9:16 aspect ratio and 2160x3840 resolution, showcasing the beauty of "Insert Subcategory". Include a variety of styles, such as hyper-realistic portraits, stylized illustrations, or surreal compositions with fantasy elements. Vary the settings (e.g., natural habitats, abstract backgrounds, or cinematic lighting) and moods (e.g., serene, majestic, or dynamic) to ensure each wallpaper is unique and captivating.
+
+Wild Cats
+Birds
+Marine Life
+Dogs
+Cats
+Reptiles
+Endangered Species
+Farm Animals
+Safari Animals
+Polar Animals
+
+7. Fantasy
+
+Create 10 enchanting 4K mobile wallpapers text prompts for the Fantasy category, under the subcategory "Insert Subcategory". Each wallpaper should have a 9:16 aspect ratio and 2160x3840 resolution, immersing viewers in a magical world. Design diverse scenes, including epic battles, serene mythical landscapes, or intricate character portraits. Use varied art styles, such as digital painting, watercolor, or 3D renders, and incorporate unique elements like glowing runes or ethereal lighting to avoid repetitive designs.
+
+Dragons
+Unicorns
+Castles
+Magic Forests
+Elves
+Wizards
+Mythical Creatures
+Enchanted Lands
+Steampunk Realms
+Mythical Quests
+
+8. Technology
+
+Generate 10 futuristic 4K mobile wallpapers text prompts for the Technology category, focusing on the subcategory "Insert Subcategory". Wallpapers should have a 9:16 aspect ratio and 2160x3840 resolution, exuding a high-tech aesthetic. Create a range of designs, from sleek and polished to gritty and dystopian, incorporating elements like neon grids, holographic displays, or robotic figures. Ensure diversity by varying color schemes, perspectives, and thematic elements, making each wallpaper visually distinct.
+
+Cyberpunk
+Circuit Boards
+Robots
+AI Themes
+Futuristic Cities
+Digital Grids
+Holograms
+Neon Lights
+Futuristic Interfaces
+Virtual Reality
+
+9. Art & Illustrations
+
+Design 10 artistic 4K mobile wallpapers text prompts for the Art & Illustrations category, under the subcategory "Insert Subcategory". Each wallpaper should have a 9:16 aspect ratio and 2160x3840 resolution, showcasing unique artistic flair. Include a variety of styles, such as vibrant and bold, soft and delicate, or experimental mixed media. Avoid repetition by exploring different subjects, color palettes, and compositions, ensuring each wallpaper feels like a standalone piece of art.
+
+Watercolor
+Oil Paintings
+Sketches
+Digital Art
+Pop Art
+Surreal Art
+Neo-Traditional Art
+Cartoon Styles
+Graffiti
+Fantasy Illustrations
+
+10. Anime
+
+Create 10 captivating 4K mobile wallpapers text prompts for the Anime category, focusing on the subcategory "Insert Subcategory". Wallpapers should have a 9:16 aspect ratio and 2160x3840 resolution, embodying the vibrant anime aesthetic. Design diverse scenes, from serene and picturesque to action-packed or fantastical. Use varied art styles, such as Studio Ghibli-inspired, cyberpunk anime, or shonen vibrancy, ensuring each wallpaper feels unique and visually striking.
+
+Anime Characters
+Anime Landscapes
+Manga Panels
+Chibi Art
+Mecha Robots
+Slice of Life
+Fantasy Anime
+Sci-Fi Anime
+Anime Cyber Aesthetics
+Shonen Art
+
+11. Vintage
+Generate 10 nostalgic 4K mobile wallpapers text prompts for the Vintage category, under the subcategory "Insert Subcategory". Each wallpaper should have a 9:16 aspect ratio and 2160x3840 resolution, evoking a sense of nostalgia. Include a range of styles, such as sepia-toned, vibrant retro, or textured analog aesthetics. Diversify the designs with unique compositions, lighting, and cultural references, ensuring each wallpaper feels distinct and timeless.
+
+Retro Cars
+Black & White Photos
+Retro-Futurism
+Vinyl Records
+Retro Tech
+Classic Bikes
+Old Maps
+Nostalgic Ads
+Retro Music Elements
+Vintage Travel Ephemera
+
+12. Travel & Adventure
+Design 10 adventurous 4K mobile wallpapers text prompts for the Travel & Adventure category, focusing on the subcategory "Insert Subcategory". Wallpapers should have a 9:16 aspect ratio and 2160x3840 resolution, inspiring wanderlust. Create diverse designs, from realistic photography-style renders to stylized or surreal interpretations. Vary the settings, lighting, and moods (e.g., vibrant daylight, misty evenings) to ensure each wallpaper is unique and visually engaging.
+
+Famous Landmarks
+Tropical Islands
+Mountain Treks
+Road Trips
+Ancient Ruins
+Cultural Festivals
+Hot Air Balloons
+Camping Scenes
+Underwater Adventures
+Outdoor Exploration
+
+13. Seasons
+Create 10 seasonal 4K mobile wallpapers text prompts for the Seasons category, under the subcategory "Insert Subcategory". Each wallpaper should have a 9:16 aspect ratio and 2160x3840 resolution, capturing the essence of "Insert Subcategory". Design a range of styles, such as realistic, abstract, or illustrative, and vary the moods (e.g., cozy, vibrant, or serene). Ensure diversity by incorporating different elements, color palettes, and compositions to avoid repetitive designs.
+
+Spring Flowers
+Summer Beaches
+Autumn Leaves
+Winter Snow
+Monsoon & Rain Aesthetics
+Cherry Blossoms
+Fall Forests
+Sunny Fields
+Aurora Seasons
+Seasonal Festivals
+
+14. Gaming
+
+Generate 10 dynamic 4K mobile wallpapers text prompts for the Gaming category, focusing on the subcategory "Insert Subcategory". Wallpapers should have a 9:16 aspect ratio and 2160x3840 resolution, appealing to gaming fans. Include a variety of styles, such as hyper-realistic, pixel art, or cinematic renders. Diversify the designs with unique character poses, environments, or thematic elements, ensuring each wallpaper feels fresh and exciting.
+
+Game Characters
+Game Worlds
+Open-World Landscapes
+Fantasy RPGs
+Sci-Fi Games
+Battle Arenas
+Retro Games
+Esports Themes
+Game Weapons
+Gaming Icons & Symbols
+
+15. Macro
+
+Design 10 intricate 4K mobile wallpapers text prompts for the Macro category, under the subcategory "Insert Subcategory". Each wallpaper should have a 9:16 aspect ratio and 2160x3840 resolution, highlighting fine details. Create diverse designs, from hyper-realistic close-ups to stylized or surreal interpretations. Vary the lighting, textures, and compositions, incorporating unique elements like refracted light or abstract patterns to ensure each wallpaper is visually captivating and distinct.
+
+Water Droplets
+Flower Close-Ups
+Insect Details
+Leaf Textures
+Gemstone Textures
+Crystal Patterns
+Feather Details
+Metal Textures
+Sand & Soil Textures
+Food Close-Ups
+
+--------------------------
+
+
+
+

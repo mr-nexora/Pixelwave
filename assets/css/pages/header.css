@@ -1,0 +1,51 @@
+/* Smooth transitions for dropdowns */
+        .dropdown-content {
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+        }
+        
+        .dropdown:hover .dropdown-content,
+        .dropdown:focus-within .dropdown-content {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        /* Mobile menu animation */
+        .mobile-menu {
+            max-height: 0;
+            transition: max-height 0.5s ease-in-out;
+            overflow: hidden;
+        }
+        
+        .mobile-menu.open {
+            max-height: 1000px;
+        }
+        
+        /* Accordion animation */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+        
+        .accordion-content.open {
+            max-height: 1000px;
+        }
+        
+        /* Top header styles */
+        .top-header {
+            background: linear-gradient(90deg, #4f46e5, #7c3aed);
+        }
+        
+        .top-header a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Social icons hover effect */
+        .social-icon:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
