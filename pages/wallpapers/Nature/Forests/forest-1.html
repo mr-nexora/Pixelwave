@@ -7,17 +7,21 @@
     <title>PixelWave - Premium 4K Mobile Wallpapers</title>
 
     <!--Main CSS-->
+    <link rel="stylesheet" href="../../../../assets/css/pages/wallpapers/wallpapers-download.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../../../assets/css/pages/wallpapers.css">
 
     <!--Pages CSS-->
-    <link rel="stylesheet" href="../../../assets/css/main/category-cards.css">
-    <link rel="stylesheet" href="../../../assets/css/pages/header.css">
-    <link rel="stylesheet" href="../../../assets/css/pages/footer.css">
-    <link rel="stylesheet" href="../../../assets/css/pages/tags.css">
+    <link rel="stylesheet" href="../../../../assets/css/main/category-cards.css">
+    <link rel="stylesheet" href="../../../../assets/css/pages/header.css">
+    <link rel="stylesheet" href="../../../../assets/css/pages/tags.css">
+    <link rel="stylesheet" href="../../../../assets/css/pages/footer.css">
+
     
 </head>
+
 <body class="bg-gray-50 dark:bg-gray-900 min-h-screen">
+
     <!-- Top Header Menu -->
     <div class="top-header text-white text-sm">
         <div class="container mx-auto px-4">
@@ -60,6 +64,7 @@
             </div>
         </div>
     </div>
+
 
 
     <!-- Main Navigation Bar -->
@@ -913,267 +918,242 @@
     </nav>
 
     <!-- Category Navigation -->
-    <div class="category-nav">
-        <div class="category-container">
-            <a href="category-nature.html" class="category-btn active">
-                <i class="fas fa-mountain"></i>
-                Nature
-            </a>
-            <a href="category-abstract.html" class="category-btn">
-                <i class="fas fa-shapes"></i>
-                Abstract
-            </a>
-            <a href="category-space.html" class="category-btn">
-                <i class="fas fa-meteor"></i>
-                Space
-            </a>
-            <a href="category-cityscapes.html" class="category-btn">
-                <i class="fas fa-city"></i>
-                Cityscapes
-            </a>
-            <a href="category-minimalist.html" class="category-btn">
-                <i class="fas fa-minus"></i>
-                Minimalist
-            </a>
-            <a href="category-animals.html" class="category-btn">
-                <i class="fas fa-paw"></i>
-                Animals
-            </a>
-            <a href="category-fantasy.html" class="category-btn">
-                <i class="fas fa-dragon"></i>
-                Fantasy
-            </a>
-            <a href="category-technology.html" class="category-btn">
-                <i class="fas fa-microchip"></i>
-                Technology
-            </a>
-            <a href="category-art.html" class="category-btn">
-                <i class="fas fa-palette"></i>
-                Art
-            </a>
-            <a href="category-anime.html" class="category-btn">
-                <i class="fas fa-user-ninja"></i>
-                Anime
-            </a>
-            <a href="category-vintage.html" class="category-btn">
-                <i class="fas fa-clock"></i>
-                Vintage
-            </a>
-            <a href="category-travel.html" class="category-btn">
-                <i class="fas fa-umbrella-beach"></i>
-                Travel
-            </a>
-            <a href="category-seasons.html" class="category-btn">
-                <i class="fas fa-snowflake"></i>
-                Seasons
-            </a>
-            <a href="category-gaming.html" class="category-btn">
-                <i class="fas fa-gamepad"></i>
-                Gaming
-            </a>
-            <a href="category-vintage.html" class="category-btn">
-                <i class="fas fa-clock"></i>
-                Vintage
-            </a>
-            <a href="category-travel.html" class="category-btn">
-                <i class="fas fa-umbrella-beach"></i>
-                Travel
-            </a>
-            <a href="category-seasons.html" class="category-btn">
-                <i class="fas fa-snowflake"></i>
-                Seasons
-            </a> 
-            <a href="category-macro.html" class="category-btn">
-                <i class="fas fa-search-plus"></i>
-                Macro
-            </a>
+
+         <h2 class="section-title">Wallpaper Categories</h2>
+    
+    <div class="categories-container">
+        <div class="categories-track">
+            <!-- Category cards will be added here by JavaScript -->
         </div>
     </div>
 
-
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-background"></div>
-        <div class="hero-content">
-            <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="Nature Background" class="hero-background">
-            <h1 class="hero-title">Nature Wallpapers</h1>
-            <p class="hero-description">Immerse yourself in the breathtaking beauty of nature with our collection of stunning 4K wallpapers. From lush forests to majestic mountains, find the perfect natural backdrop for your device.</p>
-            
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-number">1,200+</span>
-                    <span>Wallpapers</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">10</span>
-                    <span>Subcategories</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">4K</span>
-                    <span>Resolution</span>
-                </div>
+    <!--Wallpaper download section-->
+    <div class="container">
+        <div class="main-content">
+            <!-- Wallpaper Preview (Left Side) -->
+            <div class="wallpaper-preview">
+                <img src="https://images.unsplash.com/photo-1630521900340-896d69e99985?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDN8NnNNVmpUTFNrZVF8fGVufDB8fHx8fA%3D%3D" alt="Cyberpunk Neon City Wallpaper">
             </div>
             
-            <button class="cta-button" onclick="document.getElementById('subcategories').scrollIntoView({ behavior: 'smooth' })">
-                Browse Subcategories
-            </button>
-        </div>
-    </section>
+            <!-- Details Section (Right Side) -->
+            <div class="details-section">
+                <h1 class="wallpaper-title">Cyberpunk Neon City</h1>
+                <div class="creator-badge">
+                    <i class="fas fa-paint-brush"></i> Pixelwave
+                </div>
+                
+                <!-- Author Section -->
+                <div class="author-section">
+                    <img src="https://drive.google.com/thumbnail?id=1olRWlEiI4Wi6u6N-QQab_YlOAEda3yWs" alt="Author" class="author-avatar">
+                    <div class="author-info">
+                        <h4>Alira</h4>
+                        <p>Digital Artist & AI Specialist</p>
+                        <div class="author-stats">
+                            <span><i class="fas fa-images"></i> 1500+ Wallpapers</span>
+                            <span><i class="fas fa-heart"></i> 5.2K Likes</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Prompt Section -->
+                <div class="prompt-section" id="promptSection">
+                    <h3 class="prompt-title">
+                        <i class="fas fa-magic"></i> AI Generation Prompt
+                    </h3>
+                    <p class="prompt-text" id="promptText">
+                        "A futuristic cyberpunk city with neon lights, rain, and holograms, 8K ultra-detailed, cinematic lighting, vibrant colors, Blade Runner style"
+                    </p>
+                </div>
+                
+                <!-- Wallpaper Specs -->
+                <div class="specs">
+                    <div class="spec-item">
+                        <i class="fas fa-expand"></i> 3840x2160 (4K)
+                    </div>
+                    <div class="spec-item">
+                        <i class="fas fa-database"></i> 1.2 MB
+                    </div>
+                    <div class="spec-item">
+                        <i class="fas fa-robot"></i> Stable Diffusion XL
+                    </div>
+                    <div class="spec-item">
+                        <i class="fas fa-tags"></i> #Cyberpunk #Neon #Futuristic
+                    </div>
+                </div>
+                
+                <!-- Download Buttons -->
+                <div class="download-options">
+                    <div class="download-btn free-download" id="freeDownload">
+                        <i class="fas fa-download"></i>
+                        Free Download
+                    </div>
+                    
+                    <div class="download-btn premium-download" onclick="window.location.href='https://buymeacoffee.com/yourbrand/membership'">
+                        <i class="fas fa-crown"></i>
+                        Unlock Premium
+                    </div>
+                </div>
+                
+                <!-- Share Section -->
+                <div class="share-section">
+                    <h3 class="share-title">
+                        <i class="fas fa-share-alt"></i> Share this wallpaper
+                    </h3>
+                    <div class="share-buttons">
+                        <div class="share-btn whatsapp" onclick="shareWallpaper('whatsapp')">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="share-btn instagram" onclick="shareWallpaper('instagram')">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="share-btn twitter" onclick="shareWallpaper('twitter')">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <div class="share-btn reddit" onclick="shareWallpaper('reddit')">
+                            <i class="fab fa-reddit"></i>
+                        </div>
+                        <div class="share-btn pinterest" onclick="shareWallpaper('pinterest')">
+                            <i class="fab fa-pinterest"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="copy-link" onclick="copyShareLink()">
+                        <i class="fas fa-link"></i>
+                        <span id="share-link">https://yourbrand.com/wallpapers/cyberpunk-neon-city</span>
+                        <div class="copy-btn">
+                        <span class="tooltip">
+                            <span class="tooltiptext">Copy to clipboard</span>
+                        </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Donate Section -->
+                <div class="donate-section">
+                    <h3 class="donate-title">
+                        <i class="fas fa-coffee"></i> Support the Artist
+                    </h3>
+                    <p>Enjoying our wallpapers? Buy me a coffee to help create more amazing content!</p>
+                    <div class="donate-buttons">
+                        <a href="https://buymeacoffee.com/yourbrand" class="donate-btn bmc-btn" target="_blank" rel="noopener">
+                            <i class="fas fa-coffee"></i> Buy Me Coffee
+                        </a>
 
-    <!-- Main content -->
-    <main class="container mx-auto px-4 py-8">
-
-        <!-- Ad Space -->
-    <div class="ad-space">
-        <div class="container">
-            <div class="ad-banner">
-                <!-- Google AdSense placeholder -->
-                <div class="ad-placeholder">Advertisement</div>
+                    </div>
+                </div>
+                
+                <!-- License Section -->
+                <div class="license-section">
+                    <h3 class="license-title">
+                        <i class="fas fa-file-contract"></i> Commercial License
+                    </h3>
+                    <p>Need this wallpaper for business projects, merchandise, or client work? Get a commercial license that allows you to use this artwork legally.</p>
+                    <button class="license-btn" onclick="window.location.href='https://buymeacoffee.com/yourbrand/membership'">
+                        <i class="fas fa-lock-open"></i> Get License (Premium Only)
+                    </button>
+                </div>
+                
+                <!-- FAQ Section -->
+                <div class="faq-section">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>What devices are these wallpapers optimized for?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our wallpapers are specially designed for modern smartphones with high-resolution displays, including iPhones (especially models with OLED screens), Samsung Galaxy devices, Google Pixels, and other Android flagships.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>What are the benefits of Premium membership?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Premium members enjoy:<br>
+                            - Ad-free downloads<br>
+                            - Full 4K resolution<br>
+                            - Commercial usage rights<br>
+                            - Exclusive wallpapers<br>
+                            - Priority support<br>
+                            - Batch download options</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>Can I use these wallpapers for my YouTube channel?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Free downloads are for personal use only. For YouTube or any commercial use, you need a Premium membership which includes a commercial license.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>How do I download wallpapers to my phone?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Simply click the download button, then long-press the image on your phone and select "Save image". For Android, it will save to your Gallery. For iPhone, it saves to your Photos app.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span>What payment methods do you accept for Premium?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We accept all major credit cards, PayPal, and cryptocurrency through our Buy Me a Coffee membership platform.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-        
-        <!--Wallpapers Download Section-->
-        <!-- Filter Section -->
-        <section id="filterSection">
-            <div class="filter-categories">
-                <div class="filter-category">
-                    <div class="filter-header" data-category="date">
-                        <span>Date</span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M6 9l6 6 6-6"></path>
-                        </svg>
-                    </div>
-                    <div class="filter-options" data-category="date">
-                        <div class="filter-option" data-value="this-month">This Month</div>
-                        <div class="filter-option" data-value="last-month">Last Month</div>
-                        <div class="filter-option" data-value="last-3-months">Last 3 Months</div>
-                        <div class="filter-option" data-value="all-time">All Time</div>
-                    </div>
-                </div>
-                <div class="filter-category">
-                    <div class="filter-header" data-category="style">
-                        <span>Style/Theme</span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M6 9l6 6 6-6"></path>
-                        </svg>
-                    </div>
-                    <div class="filter-options" data-category="style">
-                        <div class="filter-option" data-value="minimal">Minimal</div>
-                        <div class="filter-option" data-value="aesthetic">Aesthetic</div>
-                        <div class="filter-option" data-value="realistic">Realistic</div>
-                        <div class="filter-option" data-value="abstract">Abstract</div>
-                        <div class="filter-option" data-value="vintage">Vintage</div>
-                        <div class="filter-option" data-value="neon">Neon/Cyberpunk</div>
-                        <div class="filter-option" data-value="dark">Dark Mode</div>
-                        <div class="filter-option" data-value="light">Light Mode</div>
-                    </div>
-                </div>
-                <div class="filter-category">
-                    <div class="filter-header" data-category="color">
-                        <span>Color</span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M6 9l6 6 6-6"></path>
-                        </svg>
-                    </div>
-                    <div class="filter-options" data-category="color">
-                        <div class="filter-option" data-value="blue">Blue</div>
-                        <div class="filter-option" data-value="green">Green</div>
-                        <div class="filter-option" data-value="pink">Pink</div>
-                        <div class="filter-option" data-value="bw">Black & White</div>
-                        <div class="filter-option" data-value="pastel">Pastel</div>
-                        <div class="filter-option" data-value="multicolor">Multicolor</div>
-                    </div>
-                </div>
-                <div class="filter-category">
-                    <div class="filter-header" data-category="orientation">
-                        <span>Orientation</span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M6 9l6 6 6-6"></path>
-                        </svg>
-                    </div>
-                    <div class="filter-options" data-category="orientation">
-                        <div class="filter-option" data-value="portrait">Portrait</div>
-                        <div class="filter-option" data-value="landscape">Landscape</div>
-                        <div class="filter-option" data-value="square">Square</div>
-                    </div>
-                </div>
-            </div>
-            <div class="filter-actions">
-                <button class="btn btn-outline" id="resetFilters">Reset</button>
-                <button class="btn btn-primary" id="applyFilters">Apply Filters</button>
-            </div>
-        </section>
-
-        <!-- Tags Section -->
-        <section class="tags-section">
-            <div class="tag active" data-tag="all">All</div>
-            <div class="tag" data-tag="nature">Nature</div>
-            <div class="tag" data-tag="ocean">Ocean</div>
-            <div class="tag" data-tag="summer">Summer</div>
-            <div class="tag" data-tag="tropical">Tropical</div>
-            <div class="tag" data-tag="sunset">Sunset</div>
-            <div class="tag" data-tag="water">Water</div>
-            <div class="tag" data-tag="travel">Travel</div>
-        </section>
-
-        <!-- Gallery -->
-        <section class="gallery" id="gallery">
-            <!-- Images will be loaded here -->
-        </section>
-
-        <!-- Load More Button -->
-        <button class="btn btn-primary load-more" id="loadMore">Load More</button>
-    </main>
-
-    <!-- Popup -->
-    <div class="popup-overlay" id="popupOverlay">
-        <div class="popup-content">
-            <button class="popup-close" id="popupClose">&times;</button>
-            <h2>Your Download is Preparing</h2>
-            <p>Please wait while we prepare your download...</p>
-            
-            <div class="ad-container" id="adContainer">
-                <p>Advertisement</p>
-            </div>
-            
-            <div class="countdown" id="countdown">3 seconds remaining...</div>
-            
-            <div class="download-ready" id="downloadReady">
-                <p>Your wallpaper is ready to download!</p>
-                <button class="btn btn-primary" id="finalDownload">Download Now</button>
-            </div>
+    
+    <!-- Ad Popup -->
+    <div class="ad-popup" id="adPopup">
+        <div class="ad-container">
+            <iframe src="https://www.profitableratecpm.com/i35gc0ehr?key=6cac7bbf1e040ae606c1cc644319c6ca" width="300" height="250" frameborder="0"></iframe>
+            <div class="loading-bar" id="loadingBar"></div>
+            <div class="countdown" id="countdown">Download starts in 3 seconds...</div>
         </div>
     </div>
+    
 
-    </main>
-
-    <!--Tags Section-->
+<!--Tags Section-->
      <section class="wallpaper-preview-section">
         
         <div class="wallpapers-container" id="wallpapersContainer">
             <!-- Wallpaper items will be added by JavaScript -->
         </div>
         
-        <div class="categories-container">
-            <a href="Nature.html" class="category-tag">Nature</a>
-            <a href="Abstract.html" class="category-tag">Abstract</a>
-            <a href="Space.html" class="category-tag">Space</a>
-            <a href="Cityscapes.html" class="category-tag">Cityscapes</a>
-            <a href="Minimalist.html" class="category-tag">Minimalist</a>
-            <a href="Animals.html" class="category-tag">Animals</a>
-            <a href="Fantasy.html" class="category-tag">Fantasy</a>
-            <a href="Technology.html" class="category-tag">Technology</a>
-            <a href="Art & Illustrations.html" class="category-tag">Art & Illustrations</a>
-            <a href="Anime.html" class="category-tag">Anime</a>
-            <a href="Vintage.html" class="category-tag">Vintage</a>
-            <a href="Travel & Adventure.html" class="category-tag">Travel & Adventure</a>
-            <a href="Seasons.html" class="category-tag">Seasons</a>
-            <a href="Gaming.html" class="category-tag">Gaming</a>
-            <a href="Macro.html" class="category-tag">Macro</a>
+         <div class="tags-container">
+            <a href="Nature.html" class="tag">Nature</a>
+            <a href="Abstract.html" class="tag">Abstract</a>
+            <a href="Space.html" class="tag">Space</a>
+            <a href="Cityscapes.html" class="tag accent">Cityscapes</a>
+            <a href="Minimalist.html" class="tag">Minimalist</a>
+            <a href="Animals.html" class="tag">Animals</a>
+            <a href="Fantasy.html" class="tag">Fantasy</a>
+            <a href="Technology.html" class="tag accent">Technology</a>
+            <a href="Art-Illustrations.html" class="tag">Art & Illustrations</a>
+            <a href="Anime.html" class="tag">Anime</a>
+            <a href="Vintage.html" class="tag">Vintage</a>
+            <a href="Travel-Adventure.html" class="tag">Travel & Adventure</a>
+            <a href="Seasons.html" class="tag">Seasons</a>
+            <a href="Gaming.html" class="tag accent">Gaming</a>
+            <a href="Macro.html" class="tag">Macro</a>
         </div>
     </section>
+
+    </main>
 
     <!--Footer-->
     <footer>
@@ -1283,15 +1263,16 @@
             </div>
         </div>
     </footer>
-
+    
 
     <!--Main Js-->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="../../../assets/js/pages/wallpapers/nature/beach.js"></script>
+    <script src="../../../../assets/js/pages/wallpapers/wallpaper-download.js"></script>
 
     <!--Pages Js-->
-    <script src="../../../assets/js/pages/header.js"></script>
-    <script src="../../../assets/js/pages/tags.js"></script>
+    <script src="../../../../assets/js/pages/header.js"></script>
+    <script src="../../../../assets/js/pages/tags.js"></script>
+    <script src="../../../../assets/js/main/category-cards.js"></script>
 
     <script>
         tailwind.config = {
