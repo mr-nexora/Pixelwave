@@ -929,38 +929,40 @@
 
     <div class="container">
         <div class="main-content">
-            <!-- Wallpaper Preview (Left Side) -->
-            <div class="wallphone-mockup">
-    <div class="phone">
-        <div class="phone-frame">
-            <div class="phone-screen">
-                <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lybHN8ZW58MHwxfDB8fHww" alt="Wallpaper Preview" class="wallpaper-preview">
-            </div>
-            <div class="phone-notch"></div>
-            <div class="phone-button"></div>
-        </div>
-    </div>
-</div>
+            
             
             <!-- Details Section (Right Side) -->
             <div class="details-section">
-                <h1 class="wallpaper-title">Cyberpunk Neon City</h1>
+                <h1 class="section-title">Cyberpunk Neon City</h1>
                 <div class="creator-badge">
                     <i class="fas fa-paint-brush"></i> By YourBrand
                 </div>
                 
                 <!-- Author Section -->
                 <div class="author-section">
-                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Author" class="author-avatar">
+                    <img src="https://drive.google.com/thumbnail?id=1olRWlEiI4Wi6u6N-QQab_YlOAEda3yWs" alt="Author" class="author-avatar">
                     <div class="author-info">
-                        <h4>John Doe</h4>
-                        <p>Digital Artist & AI Specialist</p>
+                        <h4>Alira</h4>
+                        <p class="author-p">Digital Artist & AI Specialist</p>
                         <div class="author-stats">
-                            <span><i class="fas fa-images"></i> 124 Wallpapers</span>
+                            <span><i class="fas fa-images"></i> 1500+ Wallpapers</span>
                             <span><i class="fas fa-heart"></i> 5.2K Likes</span>
                         </div>
                     </div>
                 </div>
+
+                <!-- Wallpaper Preview (Left Side) -->
+                 <div class="wallphone-mockup">
+                    <div class="phone">
+                        <div class="phone-frame">
+                            <div class="phone-screen">
+                                <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lybHN8ZW58MHwxfDB8fHww" alt="Wallpaper Preview" class="wallpaper-preview">
+                            </div>
+                        <div class="phone-notch"></div>
+                    <div class="phone-button"></div>
+                </div>
+            </div>
+        </div>
                 
                 <!-- Prompt Section -->
                 <div class="prompt-section" id="promptSection">
@@ -989,17 +991,50 @@
                 </div>
                 
                 <!-- Download Buttons -->
-                <div class="download-options">
-                    <div class="download-btn free-download" id="freeDownload">
-                        <i class="fas fa-download"></i>
-                        Free Download
-                    </div>
-                    
-                    <div class="download-btn premium-download" onclick="window.location.href='https://buymeacoffee.com/yourbrand/membership'">
-                        <i class="fas fa-crown"></i>
-                        Unlock Premium
+                 <div class="wallpaper-card">
+                    <div class="wallpaper-info">
+                        <button class="download-btn-new" id="downloadBtn" 
+                            data-adlink="https://www.example.com/ad" 
+                            data-imglink="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lybHN8ZW58MHwxfDB8fHww">
+                            <i class="fas fa-download"></i> Download HD
+                        </button>
                     </div>
                 </div>
+
+<!-- Download Popup with Ad -->
+ <div class="popup-overlay" id="popupOverlay">
+    <div class="download-popup">
+        <div class="popup-header">
+            <div class="popup-close" id="closePopup">
+                <i class="fas fa-times"></i>
+            </div>
+            <h3 class="popup-title">Download Your Wallpaper</h3>
+            <p class="popup-subtitle">High Quality 4K Resolution</p>
+        </div>
+        <div class="popup-content">
+            <div class="ad-container" id="adContainer">
+                <!-- Ad content will be loaded here -->
+                <p>Advertisement</p>
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress" id="progressBar"></div>
+            </div>
+            
+            <div class="countdown-container" id="countdownContainer">
+                <p class="countdown-text">Preparing your download...</p>
+                <div class="countdown-circle" id="countdownCircle">5</div>
+            </div>
+            
+            <div class="download-ready" id="downloadReady" style="display: none;">
+                <p class="download-ready-text">Your wallpaper is ready!</p>
+                <a href="#" class="download-btn-new" id="finalDownloadBtn">
+                    <i class="fas fa-download"></i> Download Now
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
                 
                 <!-- Share Section -->
                 <div class="share-section">
@@ -1124,15 +1159,7 @@
         </div>
     </div>
     
-    <!-- Ad Popup -->
-    <div class="ad-popup" id="adPopup">
-        <div class="ad-container">
-            <iframe src="https://www.profitableratecpm.com/i35gc0ehr?key=6cac7bbf1e040ae606c1cc644319c6ca" width="300" height="250" frameborder="0"></iframe>
-            <div class="loading-bar" id="loadingBar"></div>
-            <div class="countdown" id="countdown">Download starts in 3 seconds...</div>
-        </div>
-    </div>
-    
+
 
 <!--Tags Section-->
      <section class="wallpaper-preview-section">

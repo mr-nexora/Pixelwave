@@ -3,48 +3,7 @@
 // Track if this is first click
         let isFirstClick = true;
         
-        // Free Download Button
-        document.getElementById('freeDownload').addEventListener('click', function() {
-            if (isFirstClick) {
-                // Show ad popup for first click
-                const popup = document.getElementById('adPopup');
-                popup.style.display = 'block';
-                
-                // Start countdown
-                let seconds = 3;
-                const countdown = document.getElementById('countdown');
-                const loadingBar = document.getElementById('loadingBar');
-                
-                loadingBar.style.width = '100%';
-                
-                const timer = setInterval(() => {
-                    seconds--;
-                    countdown.textContent = `Download starts in ${seconds} second${seconds !== 1 ? 's' : ''}...`;
-                    
-                    if (seconds <= 0) {
-                        clearInterval(timer);
-                        popup.style.display = 'none';
-                        startDownload();
-                        isFirstClick = false; // Next clicks will skip ad
-                    }
-                }, 1000);
-            } else {
-                // Subsequent clicks go straight to download
-                startDownload();
-            }
-        });
-        
-        // Start download function
-        function startDownload() {
-            window.location.href = 'https://drive.google.com/uc?export=download&id=1kziIVSA94fNBEirgBzcDzigQIHr7ii7d';
-        }
-        
-        // Prompt section click for Adsera ad
-        document.getElementById('promptSection').addEventListener('click', function(e) {
-            if (!e.target.closest('#promptText')) {
-                window.open('https://www.profitableratecpm.com/i35gc0ehr?key=6cac7bbf1e040ae606c1cc644319c6ca', '_blank');
-            }
-        });
+
         
         // Copy prompt text
         document.getElementById('promptText').addEventListener('click', function() {
@@ -101,3 +60,61 @@
             const faqItem = element.parentElement;
             faqItem.classList.toggle('active');
         }
+
+
+        //Wallpaper Download Button
+        document.addEventListener('DOMContentLoaded', function() {
+        const downloadBtn = document.getElementById('downloadBtn');
+        const popupOverlay = document.getElementById('popupOverlay');
+        const closePopup = document.getElementById('closePopup');
+        const countdownCircle = document.getElementById('countdownCircle');
+        const countdownContainer = document.getElementById('countdownContainer');
+        const downloadReady = document.getElementById('downloadReady');
+        const finalDownloadBtn = document.getElementById('finalDownloadBtn');
+        const progressBar = document.getElementById('progressBar');
+        const adContainer = document.getElementById('adContainer');
+
+        downloadBtn.addEventListener('click', function() {
+            const adLink = this.getAttribute('data-adlink');
+            const imgLink = this.getAttribute('data-imglink');
+            
+            // Show popup
+            popupOverlay.classList.add('active');
+            
+            // Load ad (replace with your actual ad code)
+            adContainer.innerHTML = `<iframe src="${adLink}" frameborder="0" style="width:100%;height:100%;"></iframe>`;
+            
+            // Start countdown
+            let countdown = 5;
+            let progress = 0;
+            const countdownInterval = setInterval(() => {
+                countdown--;
+                countdownCircle.textContent = countdown;
+                progress += 20;
+                progressBar.style.width = `${progress}%`;
+                
+                if (countdown <= 0) {
+                    clearInterval(countdownInterval);
+                    countdownContainer.style.display = 'none';
+                    downloadReady.style.display = 'block';
+                    
+                    // Set the download link
+                    finalDownloadBtn.href = imgLink;
+                    finalDownloadBtn.download = `wallpaper-${Date.now()}.jpg`;
+                }
+            }, 1000);
+        });
+
+        closePopup.addEventListener('click', function() {
+            popupOverlay.classList.remove('active');
+            resetPopup();
+        });
+
+        function resetPopup() {
+            countdownCircle.textContent = '5';
+            countdownContainer.style.display = 'block';
+            downloadReady.style.display = 'none';
+            progressBar.style.width = '0%';
+            adContainer.innerHTML = '<p>Advertisement</p>';
+        }
+    });
