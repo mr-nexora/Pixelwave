@@ -48,25 +48,69 @@
         
         /* Wallpaper Preview */
         .wallpaper-preview {
-            flex: 1;
-            position: sticky;
-            top: 120px;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: transform 0.5s ease;
-        }
-        
-        .wallpaper-preview:hover {
-            transform: scale(1.02);
-        }
-        
-        .wallpaper-preview img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-right: 30px;
+}
+
+.phone-mockup {
+    position: relative;
+    width: 450px;
+    height: 750px;
+    top: 30px;
+    right: 25px;
+    border: 12px solid #333;
+    border-radius: 40px;
+    background: #111;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.phone-screen {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 28px;
+    overflow: hidden;
+    background: #000;
+}
+
+.wallpaper-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.phone-notch {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 20px;
+    background: #333;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 10;
+}
+
+.phone-button {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background: #444;
+    border-radius: 5px;
+}
+
+.wallpaper-image:hover {
+    transform: scale(1.05);
+}
         
         /* Details Section */
         .details-section {
@@ -200,21 +244,22 @@
             border-radius: 12px;
             font-weight: 700;
             font-size: 16px;
-            cursor: pointer;
+
             transition: all 0.3s ease;
             text-align: center;
-            display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            position: relative;
             overflow: hidden;
         }
         
         .free-download {
             background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.2);
             color: white;
+            margin-top: 50px;
+            width: 220px;
+            height: 120px;
+
         }
         
         .free-download:hover {
@@ -228,6 +273,10 @@
             border: none;
             position: relative;
             z-index: 1;
+            margin-top: -120px;
+            margin-left: 230px;
+            width: 220px;
+            height: 120px;
         }
         
         .premium-download::before {
@@ -270,6 +319,9 @@
             margin-bottom: 20px;
             display: flex;
             align-items: center;
+            font-size: 1.2rem;
+            font-weight: 300px;
+            color: var(--secondary);
         }
         
         .share-title i {
@@ -316,6 +368,7 @@
         
         .share-btn:hover {
             transform: translateY(-3px);
+            background-color: var(--secondary-color);
         }
         
         .whatsapp { background: #25D366; }
@@ -326,24 +379,27 @@
         
         .copy-link {
             background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 2px solid var(--secondary) ;
             padding: 4px 20px;
             border-radius: 8px;
             display: flex;
             align-items: center;
             cursor: pointer;
             transition: all 0.3s ease;
+            color: var(--secondary-color);
             margin-top: 15px;
+            background-color: var(--light);
             max-width: 400px;
         }
         
         .copy-link i {
             margin-right: 10px;
+            color:  var(--accent);
         }
         
         .copy-btn {
             border: 2px solid var(--secondary);
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: var(--light-color);
             margin-left: 30px;
             padding: 4px 16px ;
             width: 350px;
@@ -374,11 +430,19 @@
             justify-content: center;
             margin-bottom: 15px;
             color: gold;
+            font-size: 1.4rem;
+            font-weight: bold;
         }
         
         .donate-title i {
             margin-right: 10px;
             font-size: 24px;
+        }
+
+        .donate-p {
+            color: var(--secondary-color);
+            font-size: 1rem;
+            font-weight: 300px;
         }
         
         .donate-buttons {
@@ -406,17 +470,7 @@
         }
         
         .bmc-btn:hover {
-            background: #ffeb57;
-            transform: translateY(-2px);
-        }
-        
-        .paypal-btn {
-            background: #009cde;
-            color: white;
-        }
-        
-        .paypal-btn:hover {
-            background: #00aff0;
+            background: #ffe83d;
             transform: translateY(-2px);
         }
         
@@ -438,6 +492,8 @@
             align-items: center;
             margin-bottom: 15px;
             color: var(--accent);
+            font-size: 1.2rem;
+            font-weight: bold;
         }
         
         .license-title i {
@@ -445,6 +501,13 @@
             font-size: 24px;
         }
         
+        .license-p {
+            color: var(--secondary-color);
+            align-items: center;
+            font-size: 1rem;
+            font-weight: 300px;
+        }
+
         .license-btn {
             background: var(--accent);
             color: white;
@@ -496,7 +559,7 @@
             border-radius: 12px;
             margin-bottom: 15px;
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--secondary-color);
         }
         
         .faq-question {
@@ -506,6 +569,7 @@
             align-items: center;
             cursor: pointer;
             font-weight: 600;
+            color: var(--accent);
             transition: all 0.3s ease;
         }
         
@@ -515,12 +579,14 @@
         
         .faq-question i {
             transition: transform 0.3s ease;
+            color: var(--accent);
         }
         
         .faq-answer {
             padding: 0 25px;
             max-height: 0;
             overflow: hidden;
+            color: var(--primary);
             transition: max-height 0.3s ease, padding 0.3s ease;
         }
         
