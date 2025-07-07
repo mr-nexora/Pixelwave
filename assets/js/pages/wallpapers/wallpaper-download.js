@@ -1,6 +1,58 @@
-        // Track if this is first click
+
+
+// Track if this is first click
         let isFirstClick = true;
         
+        // Free Download Button
+        document.getElementById('freeDownload').addEventListener('click', function() {
+            if (isFirstClick) {
+                // Show ad popup for first click
+                const popup = document.getElementById('adPopup');
+                popup.style.display = 'block';
+                
+                // Start countdown
+                let seconds = 3;
+                const countdown = document.getElementById('countdown');
+                const loadingBar = document.getElementById('loadingBar');
+                
+                loadingBar.style.width = '100%';
+                
+                const timer = setInterval(() => {
+                    seconds--;
+                    countdown.textContent = `Download starts in ${seconds} second${seconds !== 1 ? 's' : ''}...`;
+                    
+                    if (seconds <= 0) {
+                        clearInterval(timer);
+                        popup.style.display = 'none';
+                        startDownload();
+                        isFirstClick = false; // Next clicks will skip ad
+                    }
+                }, 1000);
+            } else {
+                // Subsequent clicks go straight to download
+                startDownload();
+            }
+        });
+        
+        // Start download function
+        function startDownload() {
+            window.location.href = 'https://drive.google.com/uc?export=download&id=1kziIVSA94fNBEirgBzcDzigQIHr7ii7d';
+        }
+        
+        // Prompt section click for Adsera ad
+        document.getElementById('promptSection').addEventListener('click', function(e) {
+            if (!e.target.closest('#promptText')) {
+                window.open('https://www.profitableratecpm.com/i35gc0ehr?key=6cac7bbf1e040ae606c1cc644319c6ca', '_blank');
+            }
+        });
+        
+        // Copy prompt text
+        document.getElementById('promptText').addEventListener('click', function() {
+            const prompt = this.textContent;
+            navigator.clipboard.writeText(prompt).then(() => {
+                alert('Prompt copied to clipboard!');
+            });
+        });
         
         // Share functionality
         function shareWallpaper(platform) {
@@ -49,67 +101,3 @@
             const faqItem = element.parentElement;
             faqItem.classList.toggle('active');
         }
-
-
-        //wallpaper download button 
-        // JavaScript for handling the popup and countdown
-    document.addEventListener('DOMContentLoaded', function () {
-        const buttons = document.querySelectorAll('.download-btn');
-        const popup = document.getElementById('popup');
-        const adFrame = document.getElementById('adFrame');
-        const countdownElement = document.getElementById('countdown');
-        const countdownText = document.getElementById('countdownText');
-        const downloadButton = document.getElementById('downloadButton');
-
-        buttons.forEach(button => {
-            button.addEventListener('click', function () {
-                const adLink = button.getAttribute('data-adlink');
-                const imgLink = button.getAttribute('data-imglink');
-
-                // Show the popup
-                popup.style.display = 'block';
-
-                // Set the ad link to the iframe
-                adFrame.src = adLink;
-
-                // Start countdown
-                let countdown = 4;
-                countdownElement.textContent = countdown;
-
-                const interval = setInterval(() => {
-                    countdown--;
-                    countdownElement.textContent = countdown;
-
-                    if (countdown === 0) {
-                        clearInterval(interval);
-
-                        // Hide countdown text
-                        countdownText.style.display = 'none';
-
-                        // Show download button
-                        downloadButton.href = imgLink;
-                        downloadButton.download = imgLink.split('/').pop();
-                        downloadButton.style.visibility = 'visible';
-                    }
-                }, 1000);
-            });
-        });
-
-        // Close the popup
-        window.closePopup = function () {
-            popup.style.display = 'none';
-        };
-
-        // Social media sharing functions (placeholders)
-        function shareOnFacebook() {
-            alert("Share on Facebook");
-        }
-
-        function shareOnPinterest() {
-            alert("Share on Pinterest");
-        }
-
-        function shareOnTwitter() {
-            alert("Share on Twitter");
-        }
-    });

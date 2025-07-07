@@ -468,7 +468,7 @@
                     </button>
                     
                     <a href="#" class="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-colors duration-300">Upload</a>
-                </div>
+                </div>-->
 
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
@@ -927,37 +927,40 @@
         </div>
     </div>
 
-    <!--Wallpaper download section-->
     <div class="container">
         <div class="main-content">
+            <!-- Wallpaper Preview (Left Side) -->
+            <div class="wallphone-mockup">
+    <div class="phone">
+        <div class="phone-frame">
+            <div class="phone-screen">
+                <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lybHN8ZW58MHwxfDB8fHww" alt="Wallpaper Preview" class="wallpaper-preview">
+            </div>
+            <div class="phone-notch"></div>
+            <div class="phone-button"></div>
+        </div>
+    </div>
+</div>
             
             <!-- Details Section (Right Side) -->
             <div class="details-section">
-                <h1 class="section-title">Cyberpunk Neon City</h1>
+                <h1 class="wallpaper-title">Cyberpunk Neon City</h1>
+                <div class="creator-badge">
+                    <i class="fas fa-paint-brush"></i> By YourBrand
+                </div>
                 
                 <!-- Author Section -->
                 <div class="author-section">
-                    <img src="https://drive.google.com/thumbnail?id=1olRWlEiI4Wi6u6N-QQab_YlOAEda3yWs" alt="Author" class="author-avatar">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Author" class="author-avatar">
                     <div class="author-info">
-                        <h4>Alira</h4>
+                        <h4>John Doe</h4>
                         <p>Digital Artist & AI Specialist</p>
                         <div class="author-stats">
-                            <span><i class="fas fa-images"></i> 1500+ Wallpapers</span>
+                            <span><i class="fas fa-images"></i> 124 Wallpapers</span>
                             <span><i class="fas fa-heart"></i> 5.2K Likes</span>
                         </div>
                     </div>
                 </div>
-
-                <!-- Wallpaper Preview (Left Side) -->
-            <div class="wallpaper-preview">
-                <div class="phone-mockup">
-                    <div class="phone-screen">
-                        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lybHN8ZW58MHwxfDB8fHww" alt="Wallpaper Preview" class="wallpaper-image">
-                    </div>
-                    <div class="phone-notch"></div>
-                    <div class="phone-button"></div>
-                </div>
-            </div>
                 
                 <!-- Prompt Section -->
                 <div class="prompt-section" id="promptSection">
@@ -971,27 +974,32 @@
                 
                 <!-- Wallpaper Specs -->
                 <div class="specs">
-                    <div class="spec-item-1">
+                    <div class="spec-item">
                         <i class="fas fa-expand"></i> 3840x2160 (4K)
                     </div>
-                    <div class="spec-item-2">
-                        <i class="fas fa-database"></i> 1.2 MB
+                    <div class="spec-item">
+                        <i class="fas fa-database"></i> 5.2 MB
                     </div>
-                    <div class="spec-item-3">
+                    <div class="spec-item">
                         <i class="fas fa-robot"></i> Stable Diffusion XL
                     </div>
-                    <div class="spec-item-4">
+                    <div class="spec-item">
                         <i class="fas fa-tags"></i> #Cyberpunk #Neon #Futuristic
                     </div>
                 </div>
                 
                 <!-- Download Buttons -->
-                <div class="image-container">
-                    <button class="download-btn-new" 
-                    data-adlink="https://www.profitableratecpm.com/uw30m1nti9?key=46c870d1067a9f226912631ee691ebd7" data-imglink="https://wallpaperaccess.com/full/332367.jpg"><i class="fa-solid fa-download"></i>Download Now
-                </button>
-            </div>
-
+                <div class="download-options">
+                    <div class="download-btn free-download" id="freeDownload">
+                        <i class="fas fa-download"></i>
+                        Free Download
+                    </div>
+                    
+                    <div class="download-btn premium-download" onclick="window.location.href='https://buymeacoffee.com/yourbrand/membership'">
+                        <i class="fas fa-crown"></i>
+                        Unlock Premium
+                    </div>
+                </div>
                 
                 <!-- Share Section -->
                 <div class="share-section">
@@ -1019,11 +1027,9 @@
                     <div class="copy-link" onclick="copyShareLink()">
                         <i class="fas fa-link"></i>
                         <span id="share-link">https://yourbrand.com/wallpapers/cyberpunk-neon-city</span>
-                        <div class="copy-btn">
                         <span class="tooltip">
                             <span class="tooltiptext">Copy to clipboard</span>
                         </span>
-                        </div>
                     </div>
                 </div>
                 
@@ -1032,12 +1038,14 @@
                     <h3 class="donate-title">
                         <i class="fas fa-coffee"></i> Support the Artist
                     </h3>
-                    <p class="donate-p">Enjoying our wallpapers? Buy me a coffee to help create more amazing content!</p>
+                    <p>Enjoying our wallpapers? Buy me a coffee to help create more amazing content!</p>
                     <div class="donate-buttons">
                         <a href="https://buymeacoffee.com/yourbrand" class="donate-btn bmc-btn" target="_blank" rel="noopener">
                             <i class="fas fa-coffee"></i> Buy Me Coffee
                         </a>
-
+                        <a href="https://paypal.com/yourbrand" class="donate-btn paypal-btn" target="_blank" rel="noopener">
+                            <i class="fab fa-paypal"></i> PayPal
+                        </a>
                     </div>
                 </div>
                 
@@ -1046,7 +1054,7 @@
                     <h3 class="license-title">
                         <i class="fas fa-file-contract"></i> Commercial License
                     </h3>
-                    <p class="license-p">Need this wallpaper for business projects, merchandise, or client work? Get a commercial license that allows you to use this artwork legally.</p>
+                    <p>Need this wallpaper for business projects, merchandise, or client work? Get a commercial license that allows you to use this artwork legally.</p>
                     <button class="license-btn" onclick="window.location.href='https://buymeacoffee.com/yourbrand/membership'">
                         <i class="fas fa-lock-open"></i> Get License (Premium Only)
                     </button>
@@ -1116,32 +1124,14 @@
         </div>
     </div>
     
-   <!-- Popup -->
-<div class="popup" id="popup">
-    <div class="popup-header">
-        Download wallpaper
-        <span class="popup-close" onclick="closePopup()">×</span>
+    <!-- Ad Popup -->
+    <div class="ad-popup" id="adPopup">
+        <div class="ad-container">
+            <iframe src="https://www.profitableratecpm.com/i35gc0ehr?key=6cac7bbf1e040ae606c1cc644319c6ca" width="300" height="250" frameborder="0"></iframe>
+            <div class="loading-bar" id="loadingBar"></div>
+            <div class="countdown" id="countdown">Download starts in 3 seconds...</div>
+        </div>
     </div>
-    <div class="ad-container">
-        <iframe id="adFrame" src="" frameborder="0"></iframe>
-    </div>
-    <div class="popup-header">
-        Share Now
-    </div>
-    
-    <div class="social-icons">
-        <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/228BE6/facebook-new.png" alt="facebook"/></a>
-        <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/FA5252/instagram-new.png" alt="instagram"/></a>
-        <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/1A1A1A/twitterx--v1.png" alt="twitter"/></a>
-        <a href="#"><img src="https://img.icons8.com/puffy-filled/32/228BE6/telegram.png" alt="telegram"/></a>
-        <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/FA5252/pinterest.png" alt="pinterest"/></a>
-      </div>
-      <div class="countdown-text" id="countdownText">
-        Your image is downloading...
-        <span id="countdown">4</span>
-    </div>
-      <a href="#" class="download-button" id="downloadButton">Download full resolution image</a>
-</div>
     
 
 <!--Tags Section-->
