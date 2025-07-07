@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../../../../assets/css/pages/wallpapers/wallpapers-download.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
 
     <!--Pages CSS-->
     <link rel="stylesheet" href="../../../../assets/css/main/category-cards.css">
@@ -29,11 +30,11 @@
                 <!-- Top Navigation Links -->
                 <div class="hidden md:flex items-center space-x-1">
                     <a href="../../../../index.html" class="px-3 py-1 rounded hover:bg-white hover:bg-opacity-10 transition">Home</a>
-                    <a href="#" class="px-3 py-1 rounded hover:bg-white hover:bg-opacity-10 transition">About</a>
-                    <a href="#" class="px-3 py-1 rounded hover:bg-white hover:bg-opacity-10 transition">Team</a>
-                    <a href="#" class="px-3 py-1 rounded hover:bg-white hover:bg-opacity-10 transition">Services</a>
-                    <a href="#" class="px-3 py-1 rounded hover:bg-white hover:bg-opacity-10 transition">Pricing</a>
-                    <a href="#" class="px-3 py-1 rounded hover:bg-white hover:bg-opacity-10 transition">Contact</a>
+                    <a href="../../../main/about.html" class="px-3 py-1 rounded hover:bg-white hover:bg-opacity-10 transition">About</a>
+                    <a href="../../../main/team.html" class="px-3 py-1 rounded hover:bg-white hover:bg-opacity-10 transition">Team</a>
+                    <a href="../../../main/services.html" class="px-3 py-1 rounded hover:bg-white hover:bg-opacity-10 transition">Services</a>
+                    <a href="../../../main/pricing.html" class="px-3 py-1 rounded hover:bg-white hover:bg-opacity-10 transition">Pricing</a>
+                    <a href="../../../main/contact.html" class="px-3 py-1 rounded hover:bg-white hover:bg-opacity-10 transition">Contact</a>
                 </div>
 
                     
@@ -454,7 +455,7 @@
                 <div class="hidden md:flex items-center space-x-4">
                     <button class="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500">
                         <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" ></path>
                         </svg>
                     </button>
                     
@@ -468,13 +469,13 @@
                     </button>
                     
                     <a href="#" class="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-colors duration-300">Upload</a>
-                </div>-->
+                </div>
 
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-button" class="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
@@ -896,11 +897,6 @@
                 
                 <!-- Mobile search and theme toggle -->
                 <div class="flex items-center px-3 py-2 space-x-2">
-                    <button class="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500">
-                        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-                    </button>
                     
                     <button class="theme-toggle-mobile p-2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500">
                         <svg class="theme-toggle-dark-icon hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -934,9 +930,6 @@
             <!-- Details Section (Right Side) -->
             <div class="details-section">
                 <h1 class="section-title">Cyberpunk Neon City</h1>
-                <div class="creator-badge">
-                    <i class="fas fa-paint-brush"></i> By YourBrand
-                </div>
                 
                 <!-- Author Section -->
                 <div class="author-section">
@@ -1063,7 +1056,7 @@
                         <i class="fas fa-link"></i>
                         <span id="share-link">https://yourbrand.com/wallpapers/cyberpunk-neon-city</span>
                         <span class="tooltip">
-                            <span class="tooltiptext">Copy to clipboard</span>
+                            <span class="tooltiptext">Copy</span>
                         </span>
                     </div>
                 </div>
@@ -1073,13 +1066,10 @@
                     <h3 class="donate-title">
                         <i class="fas fa-coffee"></i> Support the Artist
                     </h3>
-                    <p>Enjoying our wallpapers? Buy me a coffee to help create more amazing content!</p>
+                    <p class="donate-p">Enjoying our wallpapers? Buy me a coffee to help create more amazing content!</p>
                     <div class="donate-buttons">
                         <a href="https://buymeacoffee.com/yourbrand" class="donate-btn bmc-btn" target="_blank" rel="noopener">
                             <i class="fas fa-coffee"></i> Buy Me Coffee
-                        </a>
-                        <a href="https://paypal.com/yourbrand" class="donate-btn paypal-btn" target="_blank" rel="noopener">
-                            <i class="fab fa-paypal"></i> PayPal
                         </a>
                     </div>
                 </div>
@@ -1089,7 +1079,7 @@
                     <h3 class="license-title">
                         <i class="fas fa-file-contract"></i> Commercial License
                     </h3>
-                    <p>Need this wallpaper for business projects, merchandise, or client work? Get a commercial license that allows you to use this artwork legally.</p>
+                    <p class="license-p">Need this wallpaper for business projects, merchandise, or client work? Get a commercial license that allows you to use this artwork legally.</p>
                     <button class="license-btn" onclick="window.location.href='https://buymeacoffee.com/yourbrand/membership'">
                         <i class="fas fa-lock-open"></i> Get License (Premium Only)
                     </button>

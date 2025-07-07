@@ -166,16 +166,6 @@
             flex: 1;
         }
         
-
-        .creator-badge {
-            display: inline-block;
-            background: rgba(136, 211, 206, 0.2);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 14px;
-            margin-bottom: 30px;
-            border: 1px solid var(--secondary);
-        }
         
         /* Author Section */
         .author-section {
@@ -490,6 +480,8 @@
         .share-title {
             margin-bottom: 20px;
             display: flex;
+            color: var(--secondary);
+            font-weight: bold;
             align-items: center;
         }
         
@@ -537,6 +529,7 @@
         
         .share-btn:hover {
             transform: translateY(-3px);
+            background-color: var(--primary-color);
         }
         
         .whatsapp { background: #25D366; }
@@ -547,25 +540,44 @@
         
         .copy-link {
             background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 10px 20px;
+            border: 1px solid var(--accent-color);
+            padding: 3px 20px;
+            color: var(--accent);
             border-radius: 8px;
+            font-size: 0.9rem;
             display: flex;
             align-items: center;
             cursor: pointer;
             transition: all 0.3s ease;
             margin-top: 15px;
-            max-width: 300px;
+            max-width: 350px;
         }
         
         .copy-link:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: #c3efff;
+            color: var(--primary);
+            font-weight: 600px;
         }
         
         .copy-link i {
             margin-right: 10px;
+            color: var(--primary-color);
+            font-weight: bolder;
         }
         
+        .tooltiptext {
+            color: var(--light-color);
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 10px;
+            margin-left: 20px;
+            background-color: var(--primary-color);
+        }
+
+        .tooltiptext:hover {
+            background-color: var(--accent);
+        }
+
         /* Donate Section */
         .donate-section {
             background: rgba(255, 215, 0, 0.1);
@@ -582,11 +594,17 @@
             justify-content: center;
             margin-bottom: 15px;
             color: gold;
+            font-size: 1.2rem;
+            font-weight: bold;
         }
         
         .donate-title i {
             margin-right: 10px;
             font-size: 24px;
+        }
+
+        .donate-p {
+            color: var(--primary);
         }
         
         .donate-buttons {
@@ -618,15 +636,6 @@
             transform: translateY(-2px);
         }
         
-        .paypal-btn {
-            background: #009cde;
-            color: white;
-        }
-        
-        .paypal-btn:hover {
-            background: #00aff0;
-            transform: translateY(-2px);
-        }
         
         .donate-btn i {
             margin-right: 8px;
@@ -645,12 +654,18 @@
             display: flex;
             align-items: center;
             margin-bottom: 15px;
+            font-weight: bold;
+            font-size: 1.2rem;
             color: var(--accent);
         }
         
         .license-title i {
             margin-right: 10px;
             font-size: 24px;
+        }
+
+        .license-p {
+            color: var(--primary-color);
         }
         
         .license-btn {
@@ -681,35 +696,20 @@
             margin: 60px 0;
         }
         
-        .section-title {
-            font-size: 28px;
-            margin-bottom: 30px;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background: var(--gradient);
-            border-radius: 2px;
-        }
         
         .faq-item {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 12px;
             margin-bottom: 15px;
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--accent);
         }
         
         .faq-question {
             padding: 18px 25px;
             display: flex;
+            color: var(--primary);
+            font-weight: bold;
             justify-content: space-between;
             align-items: center;
             cursor: pointer;
@@ -723,12 +723,14 @@
         
         .faq-question i {
             transition: transform 0.3s ease;
+            color: var(--accent);
         }
         
         .faq-answer {
             padding: 0 25px;
             max-height: 0;
             overflow: hidden;
+            color: var(--primary-color);
             transition: max-height 0.3s ease, padding 0.3s ease;
         }
         

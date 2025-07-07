@@ -50,7 +50,7 @@
                 const tooltip = document.querySelector('.tooltip .tooltiptext');
                 tooltip.textContent = 'Copied!';
                 setTimeout(() => {
-                    tooltip.textContent = 'Copy to clipboard';
+                    tooltip.textContent = 'Copy';
                 }, 2000);
             });
         }
