@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Button with Popup</title>
+    <style>
+        .download-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #1f0042;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .download-btn:hover {
+            background-color: red;
+            color: #ffffff;
+        }
+        .image-container img {
+            width: 300px;
+            height: auto;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 305px; /* Adjust the width of the popup */
+            height: 340px; /* Adjust the height of the popup */
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            overflow: hidden;
+        }
+
+        .popup-header {
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            position: relative;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .ad-container {
+            width: 300px; /* Full width of the popup */
+            height: 150px; /* Height of the ad container */
+            border: 2px solid red;
+        }
+
+        .countdown-text {
+            text-align: center;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .download-button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: #1f0042;
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            visibility: hidden; /* Initially hide the download button */
+        }
+        .download-button:hover {
+            background-color: red;
+            color: #ffffff;
+        }
+        .social-icons a {
+            display: inline-block;
+            margin: 0 4px;
+            transition: transform 0.3s ease;
+        }
+        .social-icons a img {
+            width: 30px;
+            height: 30px;
+            transition: filter 0.3s ease;
+        }
+        /* Hover effect: Change icon color */
+        .social-icons a:hover img {
+            filter: invert(43%) sepia(95%) saturate(748%) hue-rotate(180deg) brightness(105%) contrast(95%);
+            transform: scale(1.2);
+        }
+        @media (max-width: 600px) {
+            .social-icons a {
+                margin: 5px;
+            }
+        }
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            .nav-links {
+                margin-top: 1rem;
+                gap: 1rem;
+            }
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Example Image and Download Button -->
+<div class="image-container">
+    <img src="https://wallpaperaccess.com/full/332366.jpg" alt="Sample Image with Watermark">
+    <button class="download-btn" 
+            data-adlink="https://www.profitableratecpm.com/uw30m1nti9?key=46c870d1067a9f226912631ee691ebd7" 
+            data-imglink="https://wallpaperaccess.com/full/332367.jpg">Download</button>
+</div>
+
+<!-- Popup -->
+<div class="popup" id="popup">
+    <div class="popup-header">
+        Download wallpaper
+        <span class="popup-close" onclick="closePopup()">×</span>
+    </div>
+    <div class="ad-container">
+        <iframe id="adFrame" src="" frameborder="0"></iframe>
+    </div>
+    <div class="popup-header">
+        Share Now
+    </div>
+    
+    <div class="social-icons">
+        <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/228BE6/facebook-new.png" alt="facebook"/></a>
+        <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/FA5252/instagram-new.png" alt="instagram"/></a>
+        <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/1A1A1A/twitterx--v1.png" alt="twitter"/></a>
+        <a href="#"><img src="https://img.icons8.com/puffy-filled/32/228BE6/telegram.png" alt="telegram"/></a>
+        <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/FA5252/pinterest.png" alt="pinterest"/></a>
+      </div>
+      <div class="countdown-text" id="countdownText">
+        Your image is downloading...
+        <span id="countdown">4</span>
+    </div>
+      <a href="#" class="download-button" id="downloadButton">Download full resolution image</a>
+</div>
+
+<script>
+    // JavaScript for handling the popup and countdown
+    document.addEventListener('DOMContentLoaded', function () {
+        const buttons = document.querySelectorAll('.download-btn');
+        const popup = document.getElementById('popup');
+        const adFrame = document.getElementById('adFrame');
+        const countdownElement = document.getElementById('countdown');
+        const countdownText = document.getElementById('countdownText');
+        const downloadButton = document.getElementById('downloadButton');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function () {
+                const adLink = button.getAttribute('data-adlink');
+                const imgLink = button.getAttribute('data-imglink');
+
+                // Show the popup
+                popup.style.display = 'block';
+
+                // Set the ad link to the iframe
+                adFrame.src = adLink;
+
+                // Start countdown
+                let countdown = 4;
+                countdownElement.textContent = countdown;
+
+                const interval = setInterval(() => {
+                    countdown--;
+                    countdownElement.textContent = countdown;
+
+                    if (countdown === 0) {
+                        clearInterval(interval);
+
+                        // Hide countdown text
+                        countdownText.style.display = 'none';
+
+                        // Show download button
+                        downloadButton.href = imgLink;
+                        downloadButton.download = imgLink.split('/').pop();
+                        downloadButton.style.visibility = 'visible';
+                    }
+                }, 1000);
+            });
+        });
+
+        // Close the popup
+        window.closePopup = function () {
+            popup.style.display = 'none';
+        };
+
+        // Social media sharing functions (placeholders)
+        function shareOnFacebook() {
+            alert("Share on Facebook");
+        }
+
+        function shareOnPinterest() {
+            alert("Share on Pinterest");
+        }
+
+        function shareOnTwitter() {
+            alert("Share on Twitter");
+        }
+    });
+</script>
+
+</body>
+</html>
+
+
+
+
+

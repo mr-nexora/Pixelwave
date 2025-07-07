@@ -37,7 +37,31 @@
         }
         
 
-        
+        /* Section Title Styles */
+        .section-title {
+            text-align: center;
+            font-size: 2.6rem;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--accent-color);
+        }
+
+        .section-p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            font-weight: 600px;
+        }
         /* Main Content Layout */
         .main-content {
             display: flex;
@@ -56,10 +80,10 @@
 
 .phone-mockup {
     position: relative;
-    width: 450px;
-    height: 750px;
-    top: 30px;
-    right: 25px;
+    width: 500px;
+    height: 850px;
+    top: -170px;
+    right: 300px;
     border: 12px solid #333;
     border-radius: 40px;
     background: #111;
@@ -117,32 +141,13 @@
             flex: 1;
         }
         
-        .wallpaper-title {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            background: linear-gradient(to right, var(--secondary) ,var(--primary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        
-        .creator-badge {
-            display: inline-block;
-            background: #fff;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600px;
-            color: var(--accent);
-            margin-bottom: 30px;
-            border: 2px solid var(--accent);
-        }
-        
         /* Author Section */
         .author-section {
             display: flex;
             align-items: center;
             gap: 15px;
+            width: 500px;
+            margin-left: 650px;
             margin-bottom: 30px;
             padding: 15px;
             border: 2px solid var(--primary-color);
@@ -194,6 +199,9 @@
             padding: 20px;
             margin: 25px 0;
             position: relative;
+            width: 500px;
+            left: 650px;
+            top: -800px;
         }
         
         .prompt-title {
@@ -226,89 +234,148 @@
         }
         
         /* Download Buttons */
-        .spec-item {
+        .spec-item-1 {
             color: var(--primary-color);
             font-size: 1.2rem;
             font-weight: bold;
+            margin-left: 650px;
+            margin-top: -800px;
+        }
+        .spec-item-2 {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-left: 650px;
+            margin-top:  10px;
+        }
+        .spec-item-3 {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-left: 650px;
+            margin-top: 10px;
+        }
+        .spec-item-4 {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-left: 650px;
+            margin-top: 10px;
         }
 
-        .download-options {
-            display: flex;
-            gap: 20px;
-            margin: 40px 0;
+        .download-btn-new {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 2px solid var(--accent-color);
+            color: var(--secondary-color);
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 200px;
+            height: 50px;
+            margin-top: 30px;
+            margin-left: 650px;
         }
-        
-        .download-btn {
-            flex: 1;
-            padding: 18px;
-            border-radius: 12px;
-            font-weight: 700;
-            font-size: 16px;
+        .download-btn-new:hover {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+        }
 
-            transition: all 0.3s ease;
-            text-align: center;
-            flex-direction: column;
-            align-items: center;
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 305px; /* Adjust the width of the popup */
+            height: 340px; /* Adjust the height of the popup */
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
             overflow: hidden;
         }
-        
-        .free-download {
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            color: white;
-            margin-top: 50px;
-            width: 220px;
-            height: 120px;
 
-        }
-        
-        .free-download:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-3px);
-        }
-        
-        .premium-download {
-            background: var(--gradient);
-            color: white;
-            border: none;
+        .popup-header {
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
             position: relative;
-            z-index: 1;
-            margin-top: -120px;
-            margin-left: 230px;
-            width: 220px;
-            height: 120px;
         }
-        
-        .premium-download::before {
-            content: '';
+
+        .popup-close {
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(
-                to bottom right,
-                transparent, transparent, transparent,
-                rgba(255, 255, 255, 0.3), transparent, transparent, transparent
-            );
-            transform: rotate(30deg);
-            z-index: -1;
-            transition: all 0.7s ease;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            right: 10px;
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .ad-container {
+            width: 300px; /* Full width of the popup */
+            height: 150px; /* Height of the ad container */
+            border: 2px solid red;
+        }
+
+        .countdown-text {
+            text-align: center;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .download-button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: #1f0042;
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            visibility: hidden; /* Initially hide the download button */
+        }
+        .download-button:hover {
+            background-color: red;
+            color: #ffffff;
+        }
+        .social-icons a {
+            display: inline-block;
+            margin: 0 4px;
+            transition: transform 0.3s ease;
+        }
+        .social-icons a img {
+            width: 30px;
+            height: 30px;
+            transition: filter 0.3s ease;
+        }
+        /* Hover effect: Change icon color */
+        .social-icons a:hover img {
+            filter: invert(43%) sepia(95%) saturate(748%) hue-rotate(180deg) brightness(105%) contrast(95%);
+            transform: scale(1.2);
+        }
+        @media (max-width: 600px) {
+            .social-icons a {
+                margin: 5px;
+            }
+        }
+        /* Responsive design */
+        @media (max-width: 768px) {
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
         }
         
-        .premium-download:hover::before {
-            left: 100%;
-        }
         
-        .premium-download:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(110, 69, 226, 0.4);
-        }
-        
-        .download-btn i {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
         
         /* Share Section */
         .share-section {
@@ -321,6 +388,7 @@
             align-items: center;
             font-size: 1.2rem;
             font-weight: 300px;
+            margin-left: 650px;
             color: var(--secondary);
         }
         
@@ -332,6 +400,7 @@
         .share-buttons {
             display: flex;
             gap: 15px;
+            margin-left: 650px;
             flex-wrap: wrap;
         }
         
@@ -347,6 +416,7 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            
         }
         
         .share-btn::after {
@@ -390,6 +460,7 @@
             margin-top: 15px;
             background-color: var(--light);
             max-width: 400px;
+            margin-left: 650px;
         }
         
         .copy-link i {
@@ -536,23 +607,7 @@
             margin: 60px 0;
         }
         
-        .section-title {
-            font-size: 28px;
-            margin-bottom: 30px;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background: var(--gradient);
-            border-radius: 2px;
-        }
+
         
         .faq-item {
             background: rgba(255, 255, 255, 0.05);
@@ -599,45 +654,7 @@
             padding: 0 25px 20px;
         }
         
-        /* Ad Popup */
-        .ad-popup {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 300px;
-            height: 250px;
-            background: white;
-            border-radius: 10px;
-            z-index: 1000;
-            box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-            display: none;
-            overflow: hidden;
-        }
-        
-        .ad-container {
-            width: 100%;
-            height: 100%;
-            position: relative;
-        }
-        
-        .countdown {
-            position: absolute;
-            bottom: 10px;
-            left: 0;
-            right: 0;
-            text-align: center;
-            color: var(--dark);
-            font-weight: bold;
-        }
-        
-        .loading-bar {
-            height: 4px;
-            background: var(--gradient);
-            width: 0%;
-            transition: width 3s linear;
-        }
-        
+    
         
         /* Animations */
         @keyframes fadeIn {
