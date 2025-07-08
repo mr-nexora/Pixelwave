@@ -466,7 +466,7 @@
   <!--Main Js-->
     <script>
         // Load header
-        fetch('pages/share/header.html')
+        fetch('pages/share/share-header.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header').innerHTML = data;
@@ -475,7 +475,7 @@
             });
 
         // Load footer
-        fetch('pages/share/footer.html')
+        fetch('pages/share/share-footer.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer').innerHTML = data;

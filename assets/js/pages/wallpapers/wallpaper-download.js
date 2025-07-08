@@ -55,11 +55,7 @@
             });
         }
         
-        // Toggle FAQ
-        function toggleFaq(element) {
-            const faqItem = element.parentElement;
-            faqItem.classList.toggle('active');
-        }
+        
 
 
         //Wallpaper Download Button
@@ -118,3 +114,9 @@
             adContainer.innerHTML = '<p>Advertisement</p>';
         }
     });
+
+    // Toggle FAQ
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            faqItem.classList.toggle('active');
+        }
