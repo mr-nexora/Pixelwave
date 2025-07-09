@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back to Top Button</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --primary-dark: #3a56d4;
+            --primary-light: rgba(67, 97, 238, 0.2);
+            --neon-glow: 0 0 15px rgba(67, 97, 238, 0.7);
+            --dark-bg: #121212;
+            --dark-card: #1e1e1e;
+            --dark-text: #e0e0e0;
+        }
+
+        /* Dark mode styles */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: var(--dark-bg);
+                color: var(--dark-text);
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            min-height: 200vh; /* For demonstration */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Futuristic Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(145deg, #1a1a2e, #16213e);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 99;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: conic-gradient(
+                from 180deg at 50% 50%,
+                var(--primary) 0deg,
+                rgba(67, 97, 238, 0.3) 180deg,
+                var(--primary) 360deg
+            );
+            border-radius: 50%;
+            animation: rotate 3s linear infinite;
+            z-index: -1;
+        }
+
+        .back-to-top::after {
+            content: '';
+            position: absolute;
+            inset: 4px;
+            background: linear-gradient(145deg, #1a1a2e, #16213e);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .back-to-top i {
+            color: var(--primary);
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+            text-shadow: var(--neon-glow);
+            position: relative;
+            z-index: 1;
+        }
+
+        .back-to-top:hover {
+            box-shadow: 0 8px 35px rgba(67, 97, 238, 0.4);
+        }
+
+        .back-to-top:hover i {
+            transform: translateY(-5px);
+            color: #fff;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+        }
+
+        /* Hexagonal Frame Variant */
+        .back-to-top.hexagon {
+            border-radius: 0;
+            width: 80px;
+            height: 80px;
+            background: transparent;
+        }
+
+        .back-to-top.hexagon::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 0 L100 25 L100 75 L50 100 L0 75 L0 25 Z" fill="none" stroke="%234361ee" stroke-width="2"/></svg>') center/contain no-repeat;
+            animation: pulse 2s infinite alternate;
+        }
+
+        .back-to-top.hexagon::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 0 L100 25 L100 75 L50 100 L0 75 L0 25 Z" fill="%23121212"/></svg>') center/contain no-repeat;
+        }
+
+        .back-to-top.hexagon i {
+            font-size: 1.8rem;
+        }
+
+        /* Holographic Effect Variant */
+        .back-to-top.holographic {
+            background: linear-gradient(145deg, rgba(67, 97, 238, 0.1), rgba(67, 97, 238, 0.05));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(67, 97, 238, 0.3);
+        }
+
+        .back-to-top.holographic::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                45deg,
+                rgba(67, 97, 238, 0.1),
+                rgba(67, 97, 238, 0.3),
+                rgba(67, 97, 238, 0.1)
+            );
+            border-radius: 50%;
+            animation: holographic 6s infinite linear;
+            opacity: 0.7;
+        }
+
+        .back-to-top.holographic::after {
+            display: none;
+        }
+
+        /* Animations */
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.8; }
+            100% { transform: scale(1.1); opacity: 1; }
+        }
+
+        @keyframes holographic {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .back-to-top {
+                width: 60px;
+                height: 60px;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .back-to-top i {
+                font-size: 1.3rem;
+            }
+            
+            .back-to-top.hexagon {
+                width: 65px;
+                height: 65px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Scrollable content here -->
+    <p style="padding: 50px; text-align: center;">Scroll down to see the button appear</p>
+    
+    <!-- Choose one of these button styles -->
+    
+    <!-- Option 1: Circular with animated border -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopButton = document.getElementById('backToTop');
+            
+            // Show/hide button based on scroll position
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('active');
+                } else {
+                    backToTopButton.classList.remove('active');
+                }
+            });
+            
+            // Smooth scroll to top
+            backToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+                
+                // Add click animation
+                this.style.transform = 'scale(0.9)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 200);
+            });
+            
+            // Optional: Add floating animation
+            function floatAnimation() {
+                backToTopButton.style.transform = 'translateY(-5px)';
+                setTimeout(() => {
+                    backToTopButton.style.transform = 'translateY(5px)';
+                    setTimeout(() => {
+                        backToTopButton.style.transform = '';
+                        setTimeout(floatAnimation, 2000);
+                    }, 1000);
+                }, 1000);
+            }
+            
+            // Start animation when button is active
+            setInterval(() => {
+                if (backToTopButton.classList.contains('active')) {
+                    floatAnimation();
+                }
+            }, 4000);
+        });
+    </script>
+</body>
+</html>
