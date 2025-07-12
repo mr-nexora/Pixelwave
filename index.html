@@ -538,7 +538,24 @@
             });
         }
     </script>
-    
+
+<script>
+[
+  'a[href^="/"]',
+  'link[href^="/"]',
+  'script[src^="/"]',
+  'img[src^="/"]'
+].forEach(s =>
+  document.querySelectorAll(s).forEach(e =>
+    e.setAttribute(
+      e.tagName === 'A' || e.tagName === 'LINK' ? 'href' : 'src',
+      (window.location.hostname.endsWith('.github.io') ? '/Pixelwave' : '') +
+        e.getAttribute(e.tagName === 'A' || e.tagName === 'LINK' ? 'href' : 'src')
+    )
+  )
+);
+</script>
+
 
     <!--Main Js-->
     <script src="assets/js/main/main.js"></script>
