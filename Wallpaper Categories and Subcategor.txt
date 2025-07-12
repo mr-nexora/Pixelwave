@@ -398,11 +398,11 @@ Seasonal Festivals
 
 14. Gaming
 
-Game Characters
-Game Worlds
-Open-World Landscapes
-Fantasy RPGs
-Sci-Fi Games
+game Characters
+game Worlds
+open-World Landscapes
+fantasy RPGs
+sci-Fi Games
 Battle Arenas
 Retro Games
 Esports Themes
@@ -425,5 +425,201 @@ Food Close-Ups
 --------------------------
 
 
+
+
+1. Nature
+
+forests
+mountains
+rivers
+waterfalls
+beaches
+deserts
+snowscapes
+sunsets
+sunrises
+bioluminescent-landscapes
+
+2. Abstract
+
+geometric-shapes
+ai-Generated-patterns
+3d-patterns
+swirls
+gradients
+wave-designs
+fractals
+holographic-textures
+smoke-effects
+light-streaks
+
+3. Space
+
+stars
+planets
+galaxies
+nebulae
+black-holes
+astronauts
+exoplanet-horizons
+comets
+aurora-borealis
+alien-worlds
+
+4. Cityscapes
+
+skylines
+night-cities
+bridges
+skyscrapers
+street-views
+rooftops
+urban-lights
+eco-friendly-cities
+modern-architecture
+city-reflections
+
+5. Minimalist
+
+simple-icons
+line-art
+flat-designs
+monochrome
+gradient-backgrounds
+silhouettes
+micro-animations
+abstract-symbols
+clean-patterns
+minimalist-color-palettes
+
+6. Animals
+
+wild-cats
+birds
+marine Life
+dogs
+cats
+reptiles
+endangered-species
+farm-animals
+safari-animals
+polar-animals
+
+7. Fantasy
+
+dragons
+unicorns
+castles
+magic-forests
+elves
+wizards
+mythical-creatures
+enchanted-lands
+steampunk-realms
+mythical-quests
+
+8. Technology
+
+cyberpunk
+circuit-boards
+robots
+ai-themes
+futuristic-cities
+digital-grids
+holograms
+neon-lights
+futuristic-interfaces
+virtual-reality
+
+9. Art & Illustrations
+
+watercolor
+oil-paintings
+sketches
+digital-art
+pop-art
+surreal-art
+neo-traditional-art
+cartoon-styles
+graffiti
+fantasy-illustrations
+
+10. Anime
+
+anime_characters
+anime-landscapes
+manga-panels
+chibi-art
+mecha-robots
+slice-of-life
+fantasy-anime
+sci-fi-anime
+anime-cyber-aesthetics
+shonen-art
+
+11. Vintage
+
+retro-cars
+black-white-photos
+retro-futurism
+vinyl-records
+retro-tech
+classic-bikes
+old-maps
+nostalgic-ads
+retro-music-elements
+vintage-travel-ephemera
+
+12. Travel & Adventure
+
+famous-landmarks
+tropical-islands
+mountain-treks
+road-trips
+ancient-ruins
+cultural-festivals
+hot-air-balloons
+camping-scenes
+underwater-adventures
+outdoor-exploration
+
+13. Seasons
+
+spring-flowers
+summer-beaches
+autumn-leaves
+winter-snow
+monsoon-rain-aesthetics
+cherry-blossoms
+fall-forests
+sunny-fields
+aurora-seasons
+seasonal-festivals
+
+14. Gaming
+
+game-characters
+game-worlds
+open-world-landscapes
+fantasy-rpgs
+sci-fi-games
+battle-arenas
+retro-games
+esports-themes
+game-weapons
+gaming-icons-symbols
+
+15. Macro
+
+water-droplets
+flower-close-ups
+insect-details
+leaf-textures
+gemstone-textures
+crystal-patterns
+feather-details
+metal-textures
+sand-soil-textures
+food-close-ups
 
 
