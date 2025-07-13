@@ -1,0 +1,20 @@
+/* Ad Space */
+.ad-space {
+    padding: 20px 0;
+    background-color: #f1f1f1;
+}
+
+.ad-banner {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+
+.ad-placeholder {
+    padding: 30px;
+    background-color: #e9ecef;
+    color: var(--gray-color);
+    border-radius: 5px;
+}

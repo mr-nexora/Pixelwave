@@ -70,6 +70,8 @@
             padding: 180px 0 80px;
             align-items: flex-start;
         }
+
+        
         
         /* Wallpaper Preview */
         .wallphone-mockup {
@@ -618,6 +620,101 @@
             transition: width 3s linear;
         }
         
+        /* Ad Space */
+/* Modern Ad Space Styling */
+
+
+.ad-banner {
+    background-color: white;
+    padding: 5px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    max-width: 100%;
+    margin-top: 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.creative-ad-container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 728px;
+}
+
+.ad-frame {
+    background: white;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05);
+}
+
+.ad-frame::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #4361ee, #3a0ca3, #7209b7);
+    z-index: 1;
+}
+
+.ad-label {
+    font-size: 11px;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ad-space {
+        margin-top: -100px;
+        padding: 20px 0;
+    }
+    
+    .ad-banner {
+        padding: 3px;
+        border-radius: 8px;
+    }
+    
+    .creative-ad-container {
+        max-width: 468px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ad-space {
+        margin-top: -80px;
+        padding: 15px 0;
+    }
+    
+    .creative-ad-container {
+        max-width: 320px;
+    }
+    
+    .ad-label {
+        font-size: 10px;
+    }
+}
+
+/* Animation Effects */
+@keyframes subtlePulse {
+    0% { box-shadow: 0 5px 15px rgba(67, 97, 238, 0.1); }
+    50% { box-shadow: 0 8px 25px rgba(67, 97, 238, 0.15); }
+    100% { box-shadow: 0 5px 15px rgba(67, 97, 238, 0.1); }
+}
+
+.ad-banner:hover {
+    animation: subtlePulse 2s infinite;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
        
         
         /* Animations */
@@ -656,3 +753,4 @@
                 align-items: center;
             }
         }
+
