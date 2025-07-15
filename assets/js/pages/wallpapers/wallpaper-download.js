@@ -4,58 +4,6 @@
         let isFirstClick = true;
         
 
-        
-        // Copy prompt text
-        document.getElementById('promptText').addEventListener('click', function() {
-            const prompt = this.textContent;
-            navigator.clipboard.writeText(prompt).then(() => {
-                alert('Prompt copied to clipboard!');
-            });
-        });
-        
-        // Share functionality
-        function shareWallpaper(platform) {
-            const url = encodeURIComponent(window.location.href);
-            const text = encodeURIComponent('Check out this amazing Cyberpunk Neon City wallpaper from YourBrand!');
-            let shareUrl = '';
-            
-            switch(platform) {
-                case 'whatsapp':
-                    shareUrl = `https://wa.me/?text=${text}%20${url}`;
-                    break;
-                case 'twitter':
-                    shareUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
-                    break;
-                case 'facebook':
-                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-                    break;
-                case 'reddit':
-                    shareUrl = `https://www.reddit.com/submit?url=${url}&title=${text}`;
-                    break;
-                case 'pinterest':
-                    shareUrl = `https://pinterest.com/pin/create/button/?url=${url}&description=${text}`;
-                    break;
-                case 'instagram':
-                default:
-                    shareUrl = 'https://instagram.com';
-            }
-            
-            window.open(shareUrl, '_blank', 'width=600,height=400');
-        }
-        
-        // Copy share link
-        function copyShareLink() {
-            const shareLink = document.getElementById('share-link').textContent;
-            navigator.clipboard.writeText(shareLink).then(() => {
-                const tooltip = document.querySelector('.tooltip .tooltiptext');
-                tooltip.textContent = 'Copied!';
-                setTimeout(() => {
-                    tooltip.textContent = 'Copy';
-                }, 2000);
-            });
-        }
-        
-        
 
 
         //Wallpaper Download Button

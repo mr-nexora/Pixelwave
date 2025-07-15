@@ -5,7 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Download premium 4K mobile wallpapers across 15+ categories. Nature, Abstract, Space, Cityscapes and more stunning backgrounds for your device.">
     <title>PixelWave - Premium 4K Mobile Wallpapers</title>
+
+     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Stunning Forest Wallpaper 2 | PixelWave">
+    <meta property="og:description" content="Download this high-quality forest wallpaper for free from PixelWave">
+    <meta property="og:image" content="https://ik.imagekit.io/pixelwave/Nature/1.1/1.jpg?updatedAt=1752388574252">
+    <meta property="og:url" content="https://pixelwavewall.netlify.app/pages/wallpapers/nature/forests/2">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="../../../../assets/share-component/share.css">
 
     <!--Main CSS-->
     <link rel="stylesheet" href="../../../../assets/css/pages/wallpapers/wallpapers-download.css">
@@ -21,6 +34,7 @@
 
 <body class="bg-gray-50 dark:bg-gray-900 min-h-screen">
 
+        
      <!-- Header Placeholder -->
      <div id="header"></div>
 
@@ -28,6 +42,8 @@
 <!-- Hero Placeholder -->
  <div id="hero"></div>
 
+ <main class="wallpaper-container">
+    
     <!-- Category Navigation -->
 
          <h2 class="section-title">Wallpaper Categories</h2>
@@ -88,7 +104,7 @@
                     <div class="phone">
                         <div class="phone-frame">
                             <div class="phone-screen">
-                                <img src="https://ik.imagekit.io/sut123/4.jpg?updatedAt=1752387526193" alt="Wallpaper Preview" class="wallpaper-preview">
+                                <img src="https://ik.imagekit.io/pixelwave/Nature/1.1/1.jpg?updatedAt=1752388574252" alt="Wallpaper Preview" class="wallpaper-preview">
                             </div>
                         <div class="phone-notch"></div>
                     <div class="phone-button"></div>
@@ -123,7 +139,7 @@
                  <div class="wallpaper-card">
                     <div class="wallpaper-info">
                         <button class="download-btn-new" id="downloadBtn" 
-                            data-adlink="https://www.example.com/ad" 
+                            data-adlink="https://www.profitableratecpm.com/p2ugy8vv?key=8e146c15200948aa36e5da4724a2e029" 
                             data-imglink="https://drive.google.com/uc?export=download&id=1kziIVSA94fNBEirgBzcDzigQIHr7ii7d">
                             <i class="fas fa-download"></i> Download HD
                         </button>
@@ -166,36 +182,32 @@
 </div>
                 
                 <!-- Share Section -->
-                <div class="share-section">
-                    <h3 class="share-title">
-                        <i class="fas fa-share-alt"></i> Share this wallpaper
-                    </h3>
-                    <div class="share-buttons">
-                        <div class="share-btn whatsapp" onclick="shareWallpaper('whatsapp')">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <div class="share-btn instagram" onclick="shareWallpaper('instagram')">
-                            <i class="fab fa-instagram"></i>
-                        </div>
-                        <div class="share-btn twitter" onclick="shareWallpaper('twitter')">
-                            <i class="fab fa-twitter"></i>
-                        </div>
-                        <div class="share-btn reddit" onclick="shareWallpaper('reddit')">
-                            <i class="fab fa-reddit"></i>
-                        </div>
-                        <div class="share-btn pinterest" onclick="shareWallpaper('pinterest')">
-                            <i class="fab fa-pinterest"></i>
-                        </div>
-                    </div>
-                    
-                    <div class="copy-link" onclick="copyShareLink()">
-                        <i class="fas fa-link"></i>
-                        <span id="share-link">https://yourbrand.com/wallpapers/cyberpunk-neon-city</span>
-                        <span class="tooltip">
-                            <span class="tooltiptext">Copy</span>
-                        </span>
-                    </div>
-                </div>
+                <!-- Share Component -->
+        <div id="share-component"></div>
+    </main>
+    
+    <!-- Toast Notification -->
+    <div class="toast">
+        <i class="fas fa-check-circle"></i>
+        <span>Link copied to clipboard!</span>
+    </div>
+    
+    <!-- JavaScript Files -->
+    <script src="../../../../assets/share-component/share.js"></script>
+    <script>
+        // Image-specific configuration
+        const imageConfig = {
+            pageUrl: 'https://pixelwavewall.netlify.app/pages/wallpapers/nature/forests/2',
+            imageUrl: 'https://ik.imagekit.io/pixelwave/Nature/1.1/1.jpg?updatedAt=1752388574252',
+            title: 'Mystical Forest Pathway | PixelWave',
+            caption: 'Discover this breathtaking forest wallpaper perfect for your devices. Free download in 4K resolution!',
+            tags: '#pixelwave #sunexora #wallpaper #nature #forest',
+            resolution: '4K Ultra HD'
+        };
+        
+        // Initialize share component with this image's data
+        initShareComponent(imageConfig);
+    </script>
                 
                 <!-- wall-content Placeholder -->
                  <div id="wall_content"></div>
