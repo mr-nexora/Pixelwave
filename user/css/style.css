@@ -146,40 +146,62 @@ body {
 /* Tags Cloud Styles */
 /* ============================================= */
 
-.tag-h3 {
-  color: var(--light-color) ;
-  font-size: 1.2rem;
+.tags-cloud-container {
+  margin: 2rem 0;
 }
+
+.tag-h3 {
+  color: var(--light-color);
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.tag-h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  border-radius: 3px;
+}
+
 .tags-cloud {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
   margin: 1.5rem 0 2.5rem;
-  padding: 1rem;
-  border-radius: 10px;
-  border: 2px solid var(--secondary-color);
-  box-shadow: var(--shadow-sm);
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   transition: var(--transition);
 }
 
 .tags-cloud:hover {
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .tag-btn {
-  padding: 0.2rem 1.2rem;
-  background-color: rgba(255, 255, 255, 0.15);
+  padding: 0.5rem 1.5rem;
+  background-color: transparent;
   color: white;
-  border: none;
-  border-radius: 10px;
-  font-size: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
   font-weight: 500;
   cursor: pointer;
-  transition: var(--transition);
-  display: flex;
-  align-items: center;
+  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 .tag-btn::before {
@@ -191,13 +213,16 @@ body {
   height: 100%;
   background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
   opacity: 0;
-  transition: var(--transition);
+  transition: all 0.3s ease;
   z-index: -1;
+  border-radius: 30px;
 }
 
 .tag-btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   color: white;
+  border-color: transparent;
+  box-shadow: 0 5px 15px rgba(67, 97, 238, 0.4);
 }
 
 .tag-btn:hover::before {
@@ -207,31 +232,41 @@ body {
 .tag-btn.active {
   background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
   color: white;
-  box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
+  border-color: transparent;
+  box-shadow: 0 5px 20px rgba(67, 97, 238, 0.5);
+  transform: translateY(-2px);
 }
 
-/* Responsive Tags Cloud */
+/* Responsive Design */
 @media (max-width: 768px) {
   .tags-cloud {
+    padding: 1rem;
     gap: 0.6rem;
-    padding: 0.8rem;
   }
   
   .tag-btn {
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 1.2rem;
     font-size: 0.85rem;
+  }
+  
+  .tag-h3 {
+    font-size: 1.2rem;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 480px) {
   .tags-cloud {
+    padding: 0.8rem;
     gap: 0.5rem;
-    margin: 1rem 0;
   }
   
   .tag-btn {
-    padding: 0.4rem 0.8rem;
+    padding: 0.3rem 1rem;
     font-size: 0.8rem;
+  }
+  
+  .tag-h3 {
+    font-size: 1.1rem;
   }
 }
 /* Wallpapers Grid */
