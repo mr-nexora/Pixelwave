@@ -1060,6 +1060,19 @@ img {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+  .ai-prompt {
+    width: 400px;
+  }
+  #copy-prompt-btn {
+    width: 90px;
+    right: -10px;
+    margin-top: -10px;
+  }
+
+  .tags-section {
+    width: 300px;
+    left: 400px;
+  }
 }
 
 /* Small Mobile Devices (up to 576px) */
