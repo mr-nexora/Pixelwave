@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallpaper Tags Section</title>
+    <style>
+        /* Main Styles */
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--dark-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Section Title Styles */
+        :root {
+    --primary-color: #4a6fa5;
+    --secondary-color: #166088;
+    --accent-color: #4fc3f7;
+    --dark-color: #1a1a2e;
+    --light-color: #f8f9fa;
+    --text-color: #333;
+    --text-light: #777;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+.section-title {
+            text-align: center;
+            font-size: 2.6rem;
+            color: var(--accent-color);
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--accent-color);
+        }
+
+        .section-p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            font-weight: 600px;
+        }
+        
+        
+        .tags-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .tags-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .tags-header h2 {
+            font-size: 28px;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .tags-header h2:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+            bottom: -10px;
+            left: 25%;
+            border-radius: 3px;
+        }
+        
+        .tags-header p {
+            color: var(--primary-color);
+            font-size: 16px;
+        }
+        
+        .tags-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        
+        .tag-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .tag-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tag-image {
+            height: 100px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .tag-image:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+        }
+        
+        .tag-name {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            font-size: 16px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+            z-index: 1;
+        }
+        
+        /* Different background images for each tag */
+        .nature { background-image: url('https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'); }
+        .abstract { background-image: url('https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'); }
+        .space { background-image: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'); }
+        .cityscapes { background-image: url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'); }
+        .minimalist { background-image: url('https://images.unsplash.com/photo-1517486808906-6ca8b3f8e1c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'); }
+        .animals { background-image: url('https://images.unsplash.com/photo-1452570053594-1b985d6ea890?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'); }
+        .fantasy { background-image: url('https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'); }
+        .technology { background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'); }
+        .art { background-image: url('https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'); }
+        .anime { background-image: url('https://images.unsplash.com/photo-1608889825103-eb36340b8d1a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'); }
+        .vintage { background-image: url('https://images.unsplash.com/photo-1516724562728-afc824a36e84?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'); }
+        .travel { background-image: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'); }
+        .seasons { background-image: url('https://images.unsplash.com/photo-1414609245224-afa02bfb3fda?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'); }
+        .gaming { background-image: url('https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'); }
+        .macro { background-image: url('https://images.unsplash.com/photo-1518562180175-34a163b1a9a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'); }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .tags-container {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .tags-container {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+            
+            .tag-image {
+                height: 80px;
+            }
+            
+            .tag-name {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="tags-section">
+        <div class="tags-header">
+            <h2 class="section-title">Explore by Category</h2>
+            <p class="section-p">Discover wallpapers that match your style</p>
+        </div>
+        
+        <div class="tags-container">
+            <!-- Each tag item with link - replace # with your actual page links -->
+            <a href="#" class="tag-item">
+                <div class="tag-image nature"></div>
+                <div class="tag-name">Nature</div>
+            </a>
+            
+            <a href="#" class="tag-item">
+                <div class="tag-image abstract"></div>
+                <div class="tag-name">Abstract</div>
+            </a>
+            
+            <a href="#" class="tag-item">
+                <div class="tag-image space"></div>
+                <div class="tag-name">Space</div>
+            </a>
+            
+            <a href="#" class="tag-item">
+                <div class="tag-image cityscapes"></div>
+                <div class="tag-name">Cityscapes</div>
+            </a>
+            
+            <a href="#" class="tag-item">
+                <div class="tag-image minimalist"></div>
+                <div class="tag-name">Minimalist</div>
+            </a>
+            
+            <a href="#" class="tag-item">
+                <div class="tag-image animals"></div>
+                <div class="tag-name">Animals</div>
+            </a>
+            
+            <a href="#" class="tag-item">
+                <div class="tag-image fantasy"></div>
+                <div class="tag-name">Fantasy</div>
+            </a>
+            
+            <a href="#" class="tag-item">
+                <div class="tag-image technology"></div>
+                <div class="tag-name">Technology</div>
+            </a>
+            
+            <a href="#" class="tag-item">
+                <div class="tag-image art"></div>
+                <div class="tag-name">Art & Illustrations</div>
+            </a>
+            
+            <a href="#" class="tag-item">
+                <div class="tag-image anime"></div>
+                <div class="tag-name">Anime</div>
+            </a>
+            
+            <a href="#" class="tag-item">
+                <div class="tag-image vintage"></div>
+                <div class="tag-name">Vintage</div>
+            </a>
+            
+            <a href="#" class="tag-item">
+                <div class="tag-image travel"></div>
+                <div class="tag-name">Travel & Adventure</div>
+            </a>
+            
+            <a href="#" class="tag-item">
+                <div class="tag-image seasons"></div>
+                <div class="tag-name">Seasons</div>
+            </a>
+            
+            <a href="#" class="tag-item">
+                <div class="tag-image gaming"></div>
+                <div class="tag-name">Gaming</div>
+            </a>
+            
+            <a href="#" class="tag-item">
+                <div class="tag-image macro"></div>
+                <div class="tag-name">Macro</div>
+            </a>
+        </div>
+    </section>
+</body>
+</html>

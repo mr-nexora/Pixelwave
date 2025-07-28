@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wallpaper Download Hero</title>
+    <title>WallpaperHub - Premium Wallpapers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* Global Styles */
         :root {
             --primary-color: #4a6fa5;
             --secondary-color: #166088;
@@ -17,175 +19,301 @@
             --transition: all 0.3s ease;
         }
 
-        .wallpaper-hero {
-            background: linear-gradient(135deg, var(--dark-color) 0%, var(--secondary-color) 100%);
-            color: var(--light-color);
-            padding: 5rem 2rem;
-            text-align: center;
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--dark-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+        .hero {
             position: relative;
+            height: 550px;
+            background: linear-gradient(135deg, var(--dark-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
             overflow: hidden;
-            border-radius: 0 0 20px 20px;
-            box-shadow: var(--shadow);
-            margin-bottom: 2rem;
         }
 
-        .wallpaper-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
+        .hero-container {
+            max-width: 1200px;
             width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
-            opacity: 0.5;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
 
         .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
+            max-width: 600px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            color: var(--accent-color);
+            border: 1px solid rgba(79, 195, 247, 0.3);
         }
 
         .hero-title {
             font-size: 3rem;
-            margin-bottom: 1rem;
             font-weight: 700;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: white;
         }
 
         .hero-subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            color: var(--accent-color);
-            font-weight: 300;
+            font-size: 1.1rem;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 2.5rem;
+            max-width: 500px;
         }
 
-        
-        .stats {
+        .hero-cta {
             display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
             justify-content: center;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(79, 195, 247, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .hero-image {
+            position: absolute;
+            right: 5%;
+            bottom: 0;
+            width: 45%;
+            max-width: 600px;
+            z-index: 1;
+            filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.3));
+        }
+
+        .hero-stats {
+            display: flex;
             gap: 2rem;
             margin-top: 3rem;
-            flex-wrap: wrap;
         }
 
         .stat-item {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1rem 2rem;
-            border-radius: 10px;
-            min-width: 150px;
-            backdrop-filter: blur(5px);
+            display: flex;
+            flex-direction: column;
         }
 
         .stat-number {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 700;
             color: var(--accent-color);
-            margin-bottom: 0.5rem;
+            line-height: 1;
         }
 
         .stat-label {
             font-size: 0.9rem;
             opacity: 0.8;
+            margin-top: 4px;
         }
 
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .wallpaper-hero {
-                padding: 3rem 1rem;
+        /* Decorative Elements */
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(79, 195, 247, 0.1);
+            z-index: 0;
+        }
+
+        .circle-1 {
+            width: 300px;
+            height: 300px;
+            top: -150px;
+            right: -150px;
+        }
+
+        .circle-2 {
+            width: 150px;
+            height: 150px;
+            bottom: 100px;
+            left: -75px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .hero-image {
+                width: 40%;
+                opacity: 0.8;
             }
-            
+        }
+
+        @media (max-width: 992px) {
+            .hero {
+                height: auto;
+                padding: 100px 5%;
+                text-align: center;
+            }
+
+            .hero-content {
+                max-width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-subtitle {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-cta {
+                justify-content: center;
+            }
+
+            .hero-image {
+                position: relative;
+                width: 80%;
+                margin: 50px auto 0;
+                right: auto;
+                opacity: 1;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-stats {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1.5rem;
+            }
+
+            .stat-item {
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                padding: 80px 5%;
+            }
+
             .hero-title {
                 font-size: 2rem;
             }
-            
-            .hero-subtitle {
-                font-size: 1.1rem;
-            }
-            
-            .stats {
-                gap: 1rem;
-            }
-            
-            .stat-item {
-                padding: 0.8rem 1rem;
-                min-width: 120px;
-            }
-            
-            .stat-number {
-                font-size: 1.5rem;
-            }
-        }
 
-        @media (max-width: 480px) {
-            .hero-title {
-                font-size: 1.8rem;
-            }
-            
             .hero-subtitle {
                 font-size: 1rem;
             }
-            
-            .search-container {
-                margin-bottom: 1.5rem;
-            }
-            
-            .search-input {
-                padding: 0.8rem 1rem;
-                font-size: 1rem;
-            }
-            
-            .search-button {
-                padding: 0.5rem 1rem;
-                font-size: 0.9rem;
-            }
-            
-            .category-tags {
-                gap: 0.5rem;
-            }
-            
-            .category-tag {
-                padding: 0.4rem 0.8rem;
-                font-size: 0.8rem;
-            }
-            
-            .stats {
+
+            .hero-cta {
                 flex-direction: column;
-                align-items: center;
-                gap: 0.8rem;
+                width: 100%;
             }
-            
-            .stat-item {
-                width: 80%;
-                text-align: center;
+
+            .btn {
+                width: 100%;
+            }
+
+            .hero-image {
+                width: 100%;
             }
         }
     </style>
 </head>
 <body>
-    <section class="wallpaper-hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Discover Stunning Wallpapers</h1>
-            <p class="hero-subtitle">Download high-quality wallpapers for all your devices. Free for personal use!</p>
-            
-            <div class="stats">
-                <div class="stat-item">
-                    <div class="stat-number">1500+</div>
-                    <div class="stat-label">Wallpapers</div>
+    <section class="hero">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-badge">
+                    <i class="fas fa-crown" style="margin-right: 8px;"></i> Premium Collection
+                </span>
+                <h1 class="hero-title">Elevate Your Device With Stunning Wallpapers</h1>
+                <p class="hero-subtitle">Discover thousands of high-resolution wallpapers curated for designers, creatives, and wallpaper enthusiasts.</p>
+                
+                <div class="hero-cta">
+                    <a href="#browse" class="btn btn-primary">
+                        <i class="fas fa-search" style="margin-right: 8px;"></i> Browse Wallpapers
+                    </a>
+                    <a href="#trending" class="btn btn-secondary">
+                        <i class="fas fa-chart-line" style="margin-right: 8px;"></i> Trending Now
+                    </a>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">4K</div>
-                    <div class="stat-label">Quality</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Free</div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Wallpapers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4K/HD</span>
+                        <span class="stat-label">Quality</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-label">Categories</span>
+                    </div>
                 </div>
             </div>
+            
+            <img src="https://images.unsplash.com/photo-1622547748225-3fc4abd2cca0" alt="Premium wallpapers showcase" class="hero-image">
         </div>
     </section>
 </body>

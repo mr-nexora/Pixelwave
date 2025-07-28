@@ -10,6 +10,25 @@
     --transition: all 0.3s ease;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--dark-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
 
 .wallpaper-preview-section {
             padding: 3rem 2rem;
@@ -113,7 +132,7 @@
             justify-content: center;
         }
         
-        .tag {
+        .tag-main {
             display: inline-block;
             padding: 8px 20px;
             border-radius: 10px;
@@ -126,7 +145,7 @@
             border: 2px solid var(--secondary-color);
         }
 
-        .tag:hover {
+        .tag-main:hover {
             background-color: var(--secondary-color);
             color: var(--light-color);
         }
@@ -146,7 +165,7 @@
                 gap: 10px;
             }
             
-            .tag {
+            .tag-main {
                 padding: 6px 16px;
                 font-size: 0.85rem;
             }
