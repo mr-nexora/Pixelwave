@@ -994,10 +994,6 @@ img {
     font-size: 2rem;
   }
   
-  .wallpaper-details-grid {
-    grid-template-columns: 1fr;
-  }
-  
   .description-section {
     grid-column: span 1;
   }
@@ -1005,6 +1001,7 @@ img {
   .related-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  
 }
 
 /* Large Mobile Devices (576px - 768px) */
@@ -1060,19 +1057,7 @@ img {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  .ai-prompt {
-    width: 400px;
-  }
-  #copy-prompt-btn {
-    width: 90px;
-    right: -10px;
-    margin-top: -10px;
-  }
 
-  .tags-section {
-    width: 300px;
-    left: 400px;
-  }
 }
 
 /* Small Mobile Devices (up to 576px) */
@@ -1112,5 +1097,131 @@ img {
     font-size: 1rem;
     bottom: 1rem;
     right: 1rem;
+  }
+}
+
+/* Responsive CSS for Wallpaper Details Grid */
+@media (max-width: 1200px) {
+  .wallpaper-details-grid {
+    gap: 1.2rem;
+  }
+  
+  .detail-card {
+    padding: 1.2rem;
+  }
+  
+  .social-share a {
+    width: 80px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .wallpaper-details-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ai-prompt,
+  .tags-section,
+  .share-section,
+  .author-section,
+  .donate-section {
+    grid-column: span 1;
+  }
+  
+  .description-section {
+    grid-column: span 1;
+  }
+  
+  .author-content img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .social-share {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .detail-card {
+    padding: 1rem;
+  }
+  
+  .detail-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .prompt-content {
+    padding: 1rem;
+  }
+  
+  .author-content {
+    gap: 1rem;
+  }
+  
+  .social-share a {
+    width: 70px;
+    height: 30px;
+    font-size: 0.75rem;
+  }
+  
+  #copy-prompt-btn {
+    position: static;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .wallpaper-details-grid {
+    gap: 1rem;
+  }
+  
+  .author-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .author-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .social-share a {
+    width: 60px;
+    font-size: 0.7rem;
+  }
+  
+  .link-copy {
+    flex-direction: column;
+  }
+  
+  #copy-link-btn {
+    padding: 0.5rem;
+  }
+  
+  .tags-list a {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .social-share a {
+    width: 50px;
+    font-size: 0.6rem;
+  }
+  
+  .detail-card h3 {
+    font-size: 1rem;
+  }
+  
+  .author-content img {
+    width: 70px;
+    height: 70px;
   }
 }
