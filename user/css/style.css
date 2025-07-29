@@ -142,8 +142,11 @@ body {
     transform: translateX(100%);
 }
 
+.error-message {
+  color: var(--light-color);
+}
 /* ============================================= */
-/* Tags Cloud Styles */
+/* Updated Tags Cloud Styles with Uniform Font */
 /* ============================================= */
 
 .tags-cloud-container {
@@ -157,6 +160,8 @@ body {
   position: relative;
   display: inline-block;
   padding-bottom: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
 }
 
 .tag-h3::after {
@@ -202,6 +207,9 @@ body {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem; /* Uniform font size for all tags */
+  letter-spacing: 0.5px;
 }
 
 .tag-btn::before {
@@ -235,8 +243,8 @@ body {
   border-color: transparent;
   box-shadow: 0 5px 20px rgba(67, 97, 238, 0.5);
   transform: translateY(-2px);
+  font-weight: 600;
 }
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .tags-cloud {

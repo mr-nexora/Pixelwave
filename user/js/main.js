@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const pageType = window.location.pathname.split('/').pop().split('.')[0] || 'nature';
     
     // Fetch wallpapers data
-    fetch('data.json')
+    fetch('../../data.json')
         .then(response => response.json())
         .then(data => {
             const allWallpapers = data.wallpapers.filter(w => w.type === pageType);
@@ -121,35 +121,29 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             function renderTags(wallpapers) {
-                // Get all unique tags from all wallpapers (not just current filtered ones)
-                const allTags = [...new Set(allWallpapers.flatMap(w => w.tags))];
-                
-                // Sort by popularity (simple sort for demo)
-                allTags.sort();
-                
-                // Render tags
-                tagsCloud.innerHTML = '';
-                
-                // Add 'All' tag
-                const allTag = document.createElement('button');
-                allTag.className = 'tag-btn active';
-                allTag.textContent = 'All';
-                tagsCloud.appendChild(allTag);
-                
-                // Add other tags with random sizes for cloud effect
-                allTags.forEach(tag => {
-                    const tagBtn = document.createElement('button');
-                    tagBtn.className = 'tag-btn';
-                    tagBtn.textContent = tag;
-                    
-                    // Random size for cloud effect
-                    const size = Math.floor(Math.random() * 4) + 1;
-                    tagBtn.style.fontSize = `${0.8 + (size * 0.2)}rem`;
-                    tagBtn.style.opacity = `${0.7 + (size * 0.1)}`;
-                    
-                    tagsCloud.appendChild(tagBtn);
-                });
-            }
+    // Get all unique tags from all wallpapers (not just current filtered ones)
+    const allTags = [...new Set(allWallpapers.flatMap(w => w.tags))];
+    
+    // Sort by popularity (simple sort for demo)
+    allTags.sort();
+    
+    // Render tags
+    tagsCloud.innerHTML = '';
+    
+    // Add 'All' tag
+    const allTag = document.createElement('button');
+    allTag.className = 'tag-btn active';
+    allTag.textContent = 'All';
+    tagsCloud.appendChild(allTag);
+    
+    // Add other tags with uniform style
+    allTags.forEach(tag => {
+        const tagBtn = document.createElement('button');
+        tagBtn.className = 'tag-btn';
+        tagBtn.textContent = tag;
+        tagsCloud.appendChild(tagBtn);
+    });
+}
             
             function renderWallpapers(wallpapers) {
                 wallpapersGrid.innerHTML = '';

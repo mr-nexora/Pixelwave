@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Fetch wallpapers data
-    fetch('data.json')
+    fetch('../../data.json')
         .then(response => response.json())
         .then(data => {
             const wallpaper = data.wallpapers.find(w => w.id === wallpaperId);
