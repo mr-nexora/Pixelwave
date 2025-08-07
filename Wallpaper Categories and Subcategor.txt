@@ -496,7 +496,7 @@ minimalist-color-palettes
 
 wild-cats
 birds
-marine Life
+marine-life
 dogs
 cats
 reptiles

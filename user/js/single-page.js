@@ -6,18 +6,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const mainNav = document.querySelector('.main-nav');
     
-    mobileMenuBtn.addEventListener('click', function() {
-        mainNav.classList.toggle('active');
-        this.querySelector('i').classList.toggle('fa-times');
-    });
-    
+    if (mobileMenuBtn && mainNav) {
+        mobileMenuBtn.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+            this.querySelector('i').classList.toggle('fa-times');
+        });
+    }
     
     // Get wallpaper ID from URL
     const urlParams = new URLSearchParams(window.location.search);
     const wallpaperId = urlParams.get('id');
     
     if (!wallpaperId) {
-        window.location.href = 'nature.html';
+        window.location.href = 'forests.html';
         return;
     }
     
@@ -28,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const wallpaper = data.wallpapers.find(w => w.id === wallpaperId);
             
             if (!wallpaper) {
-                window.location.href = 'nature.html';
+                window.location.href = 'forests.html';
                 return;
             }
             
@@ -71,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <i class="fas fa-exclamation-triangle"></i>
                         <h3>Failed to load wallpaper</h3>
                         <p>Please try refreshing the page</p>
-                        <a href="nature.html" class="btn">Back to Nature Wallpapers</a>
+                        <a href="forests.html" class="btn">Back to forests Wallpapers</a>
                     </div>
                 </div>
             `;
@@ -83,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         tags.forEach(tag => {
             const tagElement = document.createElement('a');
-            tagElement.href = `nature.html`;
+            tagElement.href = `forests.html`;
             tagElement.className = 'tag';
             tagElement.textContent = tag;
             tagsList.appendChild(tagElement);
@@ -125,7 +126,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function setupEventListeners(wallpaper) {
         // Free download button
-        document.getElementById('free-download-btn').addEventListener('click', function() {
+        const freeDownloadBtn = document.getElementById('free-download-btn');
+        freeDownloadBtn.addEventListener('click', function() {
             showAdPopup(wallpaper);
         });
         
@@ -244,10 +246,20 @@ document.addEventListener('DOMContentLoaded', function() {
         const countdownTimer = document.getElementById('countdown-timer');
         const downloadNowBtn = document.getElementById('download-now-btn');
         const closePopup = document.getElementById('close-popup');
+        const freeDownloadBtn = document.getElementById('free-download-btn');
+        
+        // Disable and style the free download button
+        freeDownloadBtn.disabled = true;
+        freeDownloadBtn.classList.add('download-disabled', 'download-progress');
+        freeDownloadBtn.innerHTML = `<i class="fas fa-download"></i> Preparing Download <span class="download-countdown">5</span>`;
         
         // Show popup
         popup.classList.add('active');
         document.body.style.overflow = 'hidden';
+        
+        // Initially disable the download button
+        downloadNowBtn.disabled = true;
+        downloadNowBtn.classList.add('download-disabled');
         
         // Simulate ad loading
         document.getElementById('ad-container').innerHTML = `
@@ -273,23 +285,47 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
         }, 1000);
         
-        // Start countdown
+        // Start countdown for button
         let seconds = 5;
-        countdownTimer.textContent = seconds;
+        const countdownElement = freeDownloadBtn.querySelector('.download-countdown');
+        countdownElement.textContent = seconds;
         
-        const timer = setInterval(() => {
+        const buttonTimer = setInterval(() => {
             seconds--;
-            countdownTimer.textContent = seconds;
+            countdownElement.textContent = seconds;
             
             if (seconds <= 0) {
-                clearInterval(timer);
+                clearInterval(buttonTimer);
+                // Enable and style the free download button
+                freeDownloadBtn.disabled = false;
+                freeDownloadBtn.classList.remove('download-disabled', 'download-progress');
+                freeDownloadBtn.classList.add('download-pulsing');
+                freeDownloadBtn.innerHTML = `<i class="fas fa-download"></i> Download Now!`;
+            }
+        }, 1000);
+        
+        // Start popup countdown
+        let popupSeconds = 5;
+        countdownTimer.textContent = popupSeconds;
+        
+        const popupTimer = setInterval(() => {
+            popupSeconds--;
+            countdownTimer.textContent = popupSeconds;
+            
+            if (popupSeconds <= 0) {
+                clearInterval(popupTimer);
+                // Enable the download button after 5 seconds
                 downloadNowBtn.disabled = false;
+                downloadNowBtn.classList.remove('download-disabled');
+                downloadNowBtn.classList.add('download-pulsing');
                 countdownTimer.textContent = 'Ready!';
             }
         }, 1000);
         
         // Download now button
         downloadNowBtn.addEventListener('click', function() {
+            if (this.disabled) return; // Prevent action if button is disabled
+            
             // Redirect to Adsera link first
             window.open(wallpaper.adseraLink, '_blank');
             
@@ -321,7 +357,13 @@ document.addEventListener('DOMContentLoaded', function() {
         function closeAdPopup() {
             popup.classList.remove('active');
             document.body.style.overflow = '';
-            clearInterval(timer);
+            clearInterval(buttonTimer);
+            clearInterval(popupTimer);
+            
+            // Reset free download button
+            freeDownloadBtn.disabled = false;
+            freeDownloadBtn.classList.remove('download-disabled', 'download-progress', 'download-pulsing');
+            freeDownloadBtn.innerHTML = `<i class="fas fa-download"></i> Free Download`;
         }
     }
 });

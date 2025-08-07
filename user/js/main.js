@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
         
     // Get current page type from URL
-    const pageType = window.location.pathname.split('/').pop().split('.')[0] || 'nature';
+    const pageType = window.location.pathname.split('/').pop().split('.')[0] || 'forests';
     
     // Fetch wallpapers data
     fetch('../../data.json')

@@ -1100,6 +1100,62 @@ img {
   }
 }
 
+/* Add to single-page.css */
+
+/* Download button animations */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes progress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+.download-progress {
+  position: relative;
+  overflow: hidden;
+}
+
+.download-progress::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background-color: var(--accent-color);
+  animation: progress 5s linear forwards;
+}
+
+.download-disabled {
+  position: relative;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.download-disabled::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255,255,255,0.3);
+  z-index: 1;
+}
+
+.download-countdown {
+  display: inline-block;
+  margin-left: 8px;
+  font-weight: bold;
+}
+
+.download-pulsing {
+  animation: pulse 1.5s infinite;
+}
+
 /* Responsive CSS for Wallpaper Details Grid */
 @media (max-width: 1200px) {
   .wallpaper-details-grid {

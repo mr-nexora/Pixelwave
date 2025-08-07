@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forests Wallpapers - PixelWave</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!--Main CSS-->
+    <link rel="stylesheet" href="../../assets/css/main/category-cards.css">
+    <link rel="stylesheet" href="../../assets/css/pages/back-to-top.css">
+    
+    <!--Pages CSS-->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 min-h-screen">
+<div class="mobile-menu-btn"></div>
+
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+
+
+    <!-- Header Menu -->
+     <div id="header"></div>
+    
+   
+     <!-- Hero Menu -->
+     <div id="hero"></div>
+
+            
+
+     <!-- Category Navigation -->
+
+         <h2 class="section-title">Wallpaper Categories</h2>
+    
+    <div class="categories-container">
+        <div class="categories-track">
+            <!-- Category cards will be added here by JavaScript -->
+        </div>
+    </div>
+
+
+
+    <!-- Main Content -->
+    <main class="category-page">
+        <div class="container">
+            <!-- Type Selector with Modern Toggle -->
+            <div class="type-toggle-container">
+                <div class="type-toggle">
+                    <input type="radio" id="desktop-toggle" name="wallpaper-type" checked>
+                    <label for="desktop-toggle" class="toggle-option active">
+                        <i class="fas fa-desktop"></i>
+                        <span>Desktop</span>
+                    </label>
+                    
+                    <input type="radio" id="mobile-toggle" name="wallpaper-type">
+                    <label for="mobile-toggle" class="toggle-option">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Mobile</span>
+                    </label>
+                    
+                    <div class="toggle-highlight"></div>
+                </div>
+            </div>
+
+            <!-- Tags Cloud with Floating Animation -->
+            <div class="tags-cloud-container">
+                <h3 class="tag-h3">Browse by Tags</h3>
+                <div class="tags-cloud" id="tags-cloud">
+                    <!-- Tags will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Wallpapers Grid with Hover Effects -->
+            <div class="wallpapers-grid" id="wallpapers-grid">
+                <!-- Wallpapers will be populated by JavaScript -->
+            </div>
+
+            <!-- Modern Pagination -->
+            <div class="pagination-wrapper">
+                <div class="pagination" id="pagination">
+                    <!-- Pagination will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Tags Section -->
+     <div id="tags"></div>
+
+
+    <!--Back to Top button-->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!--Footer-->
+    <div id="footer"></div>
+
+
+  <!--Main Js-->
+    <script>
+        // Load header
+        fetch('../pages/share/share-header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+                // Initialize any header-specific JS here
+                initHeaderScripts();
+            });
+
+            // Load hero
+        fetch('../pages/share/share-hero.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('hero').innerHTML = data;
+            });
+
+            // Load tags
+        fetch('../pages/share/share-tags.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('tags').innerHTML = data;
+            });
+
+        // Load footer
+        fetch('../pages/share/share-footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+
+        function initHeaderScripts() {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const mobileMenuClose = document.querySelector('.mobile-menu-close');
+            const overlay = document.querySelector('.overlay');
+
+            if(mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.add('active');
+                    overlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+
+            if(mobileMenuClose) {
+                mobileMenuClose.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                });
+            }
+
+            if(overlay) {
+                overlay.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                });
+            }
+
+            // Mobile Dropdown Toggle
+            const dropdownBtns = document.querySelectorAll('.mobile-dropdown-btn');
+            dropdownBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    btn.classList.toggle('active');
+                    const dropdownMenu = btn.nextElementSibling;
+                    dropdownMenu.classList.toggle('active');
+                });
+            });
+
+            // Set active nav item based on current page
+            const currentPage = location.pathname.split('/').pop();
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if(link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    </script>
+
+
+    <!--Main JS-->
+    <script src="../../assets/js/main/category-cards.js"></script>
+    <script src="../../assets/js/pages/back-to-top.js"></script>
+
+    <!--Pages JS-->
+    <script src="js/main.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+
+
+</body>
+</html>

@@ -289,7 +289,8 @@ https://ik.imagekit.io/pixelwave/02/2.6/6.jpg?updatedAt=1752397292712
 https://ik.imagekit.io/pixelwave/02/2.6/7.jpg?updatedAt=1752397293446
 https://ik.imagekit.io/pixelwave/02/2.6/8.jpg?updatedAt=1752397289197
 https://ik.imagekit.io/pixelwave/02/2.6/9.jpg?updatedAt=1752397294285
-https://ik.imagekit.io/pixelwave/02/2.6/10.jpg?updatedAt=1752388829276
+
+
 
 2.7
 view links
